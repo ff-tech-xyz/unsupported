@@ -93,8 +93,7 @@ public final class CollapseQueue {
             return false;
         }
         try {
-            FallingBlockEntity entity = FallingBlockEntity.fall(level, pos, state);
-            entity.disableDrop();
+            FallingBlockEntity.fall(level, pos, state);
             return true;
         } catch (RuntimeException e) {
             logger.debug("Unsupported left {} untouched because it could not become a falling block", pos, e);
