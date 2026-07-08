@@ -6,17 +6,29 @@ The goal is simple: heavy blocks should need sensible supports. A stone bridge, 
 
 ## Current status
 
-Phase 1 adds the block-weight data loader and the operator `/weight <block>` command. Full structural-collapse gameplay is still planned for later phases.
+Phase 2 adds active structural-collapse behavior. The mod loads block weight and strength data, watches server-side block interactions, scans a bounded local region, and turns unsupported failed blocks into falling blocks.
 
-## First testable feature
+The first safety limits are deliberately conservative:
 
-The mod loads the provided block-weight table and adds an operator command:
+- scan cap: `256` blocks by default
+- max scan radius: `16`
+- max falling blocks per tick: `64`
+- unknown blocks use a stone-like strength fallback
+- blocks that cannot safely become falling blocks are left untouched
+- no automatic player/operator warning messages
+
+## Operator commands
+
+The mod keeps the original weight command and adds an `unsupported` namespace for testing:
 
 ```mcfunction
 /weight <block>
+/unsupported weight <block>
+/unsupported strength <block>
+/unsupported scan <pos>
 ```
 
-The command is tab-completable, usable by server operators, and returns the configured weight for the selected block.
+`/unsupported scan` reports support status without directly mutating the world. Normal collapse checks happen from server-side block break/use events and are processed at the end of the level tick.
 
 ## Block weight data
 
@@ -26,8 +38,8 @@ The initial block-weight table is saved in [`docs/BLOCK_WEIGHTS.md`](docs/BLOCK_
 
 1. Load block weight data in a Fabric 26.2 server mod.
 2. Add `/weight <block>` for operator testing.
-3. Prototype non-destructive support checks so admins can see what would be supported or overloaded.
-4. Add configurable unsupported-building behavior after testing the rules on a local server.
+3. Add active structural-collapse checks with bounded scans, config safety caps, and falling-block failures.
+4. Tune support math and gameplay feel on the local test server.
 
 ## Testing plan
 
