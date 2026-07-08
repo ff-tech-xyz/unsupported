@@ -1,11 +1,11 @@
 # Unsupported Build Plan
 
-Status: active / phase 0 in progress
+Status: active / phase 1 test server running; active collapse implementation planned
 Channel: #unsupported (thread: 1524141731086336021; parent channel id not exposed to Phred)
 Project slug: unsupported
 Repo: ff-tech-xyz/unsupported
 Local checkout: /home/p-h-r-e-d/workspaces/mods/unsupported
-Last updated: 2026-07-07T20:02:06Z
+Last updated: 2026-07-08T02:26:34Z
 
 ## 1. Concept
 
@@ -28,7 +28,8 @@ The first player/admin-facing slice is deliberately small: load the provided blo
 
 - [ ] Confirm whether the command should be exactly `/weight` or corrected to `/weight`. Plan keeps `/weight` unless told otherwise.
 - [ ] Confirm whether weight values should be stored only as queryable data in Phase 1, or immediately affect block-support physics.
-- [ ] Define support rules for the actual building mechanic: max carried weight, support propagation range, which blocks count as supports, and what happens when unsupported blocks fail.
+- [x] Initial support-rule proposal gathered from `outputs/collapse_math.md`: load tree, C/S/T capacities, support-byte field, wedge/arch rule.
+- [x] Elijah confirmed active collapse direction: block-update scans, default scan cap 256 configurable, stone-like fallback, falling blocks, no warnings.
 - [ ] Confirm whether clients need the mod installed. Current assumption: server-side only for commands and block checks.
 
 ## 4. Research notes and sources
@@ -43,7 +44,7 @@ The first player/admin-facing slice is deliberately small: load the provided blo
 - **Weight data:** generated resource/data file from `BLOCK_WEIGHTS.md`, loaded into a registry-backed map keyed by block id.
 - **Block injection/query:** attach weights through a small service/API used by commands and later support simulation. Avoid hard-coding weights in Java.
 - **Command:** `/weight <block>` available to operators only. The `<block>` argument should use Minecraft's block argument so it is tab-completable and validates block ids.
-- **Support simulation (later phase):** evaluate connected/supporting blocks after placement/break events, calculate carried weight, and trigger configured failure behavior for unsupported structures.
+- **Support simulation (Phase 2+):** use copied references in `docs/COLLAPSE_MATH.md`, `docs/WEIGHT_PLAN.md`, and `docs/BLOCK_STRENGTHS.csv`. Phase 2 now proceeds to active falling-block collapse on block updates using configurable bounded scans.
 - **Permissions/security:** command requires operator permission level; no player-run destructive testing until support rules are explicit.
 
 ## 6. Repository / project setup
@@ -101,19 +102,28 @@ The first player/admin-facing slice is deliberately small: load the provided blo
 
 ### Phase 2 — Basic support checks
 
-**Goal:** Make building support visible without risking destructive world behavior yet.
+**Goal:** Make unsupported/overloaded structures actively collapse into falling blocks after block updates, with bounded configurable scans.
+
+**Input docs copied from `outputs/`:**
+- `docs/WEIGHT_PLAN.md` — mass assignment rationale.
+- `docs/COLLAPSE_MATH.md` — C/S/T capacity model, load tree, support field, and wedge/arch rule.
+- `docs/BLOCK_STRENGTHS.csv` — 1,254-block strength table.
+- `docs/PHASE_2_SUPPORT_PLAN.md` — updated support/collapse decisions.
+- `docs/IMPLEMENTATION_PLAN.md` — concrete build plan for active collapse.
 
 **Phred does:**
-- Add support graph calculations after block place/break.
-- Add debug/admin command output showing supported vs overloaded structures.
-- Add config values for max load/support behavior.
+- Add a block-strength data resource/service with mass, carry/compression (`C`), shear (`S`), and tension (`T`).
+- Keep the existing `/weight <block>` behavior working.
+- Add operator diagnostics such as `/unsupported strength <block>` and `/unsupported check <pos>`.
+- Add bounded support scanning with configurable cap default 256, triggered by block updates.
+- Convert failed structures into falling blocks; no unsolicited player/operator warnings.
 
 **Verification Phred runs:**
 - `./gradlew build`.
-- Server smoke tests with simple pillars, bridges, and heavy blocks.
-- Log evidence for supported and unsupported examples.
+- Server smoke tests with simple pillars, bridges, stone cantilevers, arches/cave ceilings, dirt roofs, and heavy blocks.
+- Verify unsupported examples turn into falling blocks, scan caps hold, unknown blocks use fallback safely, and no warnings appear.
 
-**Stop point / Elijah tests:** Elijah tests whether the rules feel right before blocks start breaking.
+**Stop point / Elijah tests:** Elijah tests whether falling-block collapse feels right on the local server.
 
 **What phrase starts it:** `do phase 2`
 
@@ -144,7 +154,7 @@ The first player/admin-facing slice is deliberately small: load the provided blo
 
 ## 9. Risks / dependencies / approvals
 
-- **Design risk:** the actual support mechanic can become laggy if it recalculates too much after every block update; Phase 2 should prototype cautiously.
+- **Design risk:** the actual support mechanic can become laggy if it recalculates too much after every block update; Phase 2 should prototype cautiously with bounded scans before any cached support-field engine.
 - **Gameplay risk:** destructive failure behavior can grief builds if rules are wrong; Phase 3 should be gated by Elijah testing.
 - **Compatibility risk:** 26.2/Fabric mappings are PyreHaven-specific; copy the local known-good pattern rather than guessing new dependency versions.
 
@@ -156,5 +166,10 @@ The first player/admin-facing slice is deliberately small: load the provided blo
 - [x] Checked Fabric documentation source availability.
 - [x] Checked local pyretest profiles for 26.2 Fabric version clues.
 - [x] Confirmed public visibility; created repo and checkout.
-- [ ] Register project in `projects-index.yaml` after repo/test profile facts exist.
-- [ ] Implement Phase 1 only after Elijah says `do phase 1`.
+- [x] Registered project in `projects-index.yaml` and added `mod:unsupported` pyretest profile.
+- [x] Implemented Phase 1 after Elijah said `do phase 1`.
+- [x] Opened Phase 0 scaffold PR: https://github.com/ff-tech-xyz/unsupported/pull/1
+- [x] Opened Phase 1 PR: https://github.com/ff-tech-xyz/unsupported/pull/2
+- [x] Launched `mod:unsupported`; port 25565 open; server log confirms `/weight` registered.
+- [x] Copied corrected `outputs/` references into docs: `WEIGHT_PLAN.md`, `COLLAPSE_MATH.md`, `BLOCK_STRENGTHS.csv`, `PHASE_2_SUPPORT_PLAN.md`.
+- [x] Wrote active collapse implementation plan from Elijah decisions: `docs/IMPLEMENTATION_PLAN.md`.
