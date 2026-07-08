@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "unsupported",
+	"version": "${version}",
+	"name": "Unsupported",
+	"description": "A PyreHaven server mod that gives Minecraft blocks weight and makes structural support matter.",
+	"authors": [
+		"PyreHaven",
+		"P.H.R.E.D."
+	],
+	"contact": {
+		"homepage": "https://pyrehaven.xyz",
+		"sources": "https://github.com/ff-tech-xyz/unsupported",
+		"issues": "https://github.com/ff-tech-xyz/unsupported/issues"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"xyz.fftech.unsupported.UnsupportedMod"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"fabric-api": ">=0.153.0",
+		"minecraft": "~26.2",
+		"java": ">=21"
+	}
+}

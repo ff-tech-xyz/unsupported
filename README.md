@@ -6,19 +6,17 @@ The goal is simple: heavy blocks should need sensible supports. A stone bridge, 
 
 ## Current status
 
-Phase 0 is project scaffolding only. Gameplay is not implemented yet.
+Phase 1 adds the block-weight data loader and the operator `/weight <block>` command. Full structural-collapse gameplay is still planned for later phases.
 
-Planned first feature branch: `feature/weight`.
+## First testable feature
 
-## Planned first testable feature
-
-The first buildable slice will load the provided block-weight table and add an operator command:
+The mod loads the provided block-weight table and adds an operator command:
 
 ```mcfunction
 /weight <block>
 ```
 
-The command should be tab-completable, usable by server operators, and return the configured weight for the selected block.
+The command is tab-completable, usable by server operators, and returns the configured weight for the selected block.
 
 ## Block weight data
 
