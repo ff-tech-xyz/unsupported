@@ -11,6 +11,7 @@ import xyz.fftech.unsupported.UnsupportedConfig;
 import java.util.ArrayDeque;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.function.Consumer;
 
 public final class CollapseQueue {
     private final UnsupportedConfig config;
@@ -50,28 +51,21 @@ public final class CollapseQueue {
             return;
         }
 
-        int scansThisTick = 0;
-        while (!scanQueue.isEmpty() && scansThisTick < 8) {
-            BlockPos origin = scanQueue.removeFirst();
+        drainAttempts(scanQueue, 8, origin -> {
             queuedScans.remove(origin);
             SupportScanResult result = scanner.scan(level, origin);
-            if (result.limitReached()) {
-                continue;
-            }
-            for (BlockPos failed : result.failedPositions()) {
-                enqueueFall(failed);
-            }
-            scansThisTick++;
-        }
+            if (!result.limitReached()) for (BlockPos failed : result.failedPositions()) enqueueFall(failed);
+        });
 
-        int collapsed = 0;
-        while (!fallingQueue.isEmpty() && collapsed < config.maxCollapseBlocksPerTick) {
-            BlockPos pos = fallingQueue.removeFirst();
+        drainAttempts(fallingQueue, config.maxCollapseBlocksPerTick, pos -> {
             queuedFalls.remove(pos);
-            if (collapseBlock(level, pos)) {
-                collapsed++;
-            }
-        }
+            collapseBlock(level, pos);
+        });
+    }
+
+    static <T> void drainAttempts(ArrayDeque<T> queue, int budget, Consumer<T> attempt) {
+        int attempted = 0;
+        while (!queue.isEmpty() && attempted++ < budget) attempt.accept(queue.removeFirst());
     }
 
     private void enqueueScan(BlockPos pos) {

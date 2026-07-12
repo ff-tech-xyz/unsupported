@@ -79,6 +79,9 @@ tasks.register("supportLogicTest", JavaExec) {
 	dependsOn testClasses
 	classpath = sourceSets.test.runtimeClasspath
 	mainClass = "xyz.fftech.unsupported.support.SupportLogicTest"
+	def runDir = layout.buildDirectory.dir("supportLogicTest")
+	doFirst { runDir.get().asFile.mkdirs() }
+	workingDir runDir
 }
 
 test {
