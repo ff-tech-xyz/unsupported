@@ -2,6 +2,8 @@ package xyz.fftech.unsupported;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import net.fabricmc.loader.api.FabricLoader;
 import org.slf4j.Logger;
 
@@ -33,14 +35,21 @@ public final class UnsupportedConfig {
 
     public static UnsupportedConfig load(Logger logger) {
         Path path = FabricLoader.getInstance().getConfigDir().resolve("unsupported.json");
+        return load(path, logger);
+    }
+
+    static UnsupportedConfig load(Path path, Logger logger) {
         UnsupportedConfig config = new UnsupportedConfig();
         boolean migratedWeightData = false;
         if (Files.exists(path)) {
             try (Reader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
-                UnsupportedConfig loaded = GSON.fromJson(reader, UnsupportedConfig.class);
+                JsonObject json = JsonParser.parseReader(reader).getAsJsonObject();
+                UnsupportedConfig loaded = GSON.fromJson(json, UnsupportedConfig.class);
                 if (loaded != null) {
                     config = loaded;
-                    if (config.weightDataVersion < CURRENT_WEIGHT_DATA_VERSION) {
+                    boolean legacyWeightData = !json.has("weightDataVersion")
+                        || json.get("weightDataVersion").getAsInt() < CURRENT_WEIGHT_DATA_VERSION;
+                    if (legacyWeightData) {
                         config.collapseEnabled = false;
                         config.weightDataVersion = CURRENT_WEIGHT_DATA_VERSION;
                         migratedWeightData = true;

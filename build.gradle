@@ -65,6 +65,20 @@ java {
 	targetCompatibility = JavaVersion.VERSION_21
 }
 
+tasks.register("configMigrationTest", JavaExec) {
+	group = "verification"
+	description = "Runs Unsupported config migration regression tests"
+	dependsOn testClasses
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = "xyz.fftech.unsupported.UnsupportedConfigMigrationTest"
+}
+
+test {
+	failOnNoDiscoveredTests = false
+}
+
+check.dependsOn configMigrationTest
+
 jar {
 	inputs.property "archivesName", project.base.archivesName
 	from("LICENSE") {
