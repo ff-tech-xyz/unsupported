@@ -1383,6 +1383,14 @@
     "maxArchSpan": 0,
     "maxCantilever": 0
   },
+  "minecraft:chain": {
+    "C": 7648.0,
+    "S": 7648.0,
+    "T": 7648.0,
+    "m": 236.1,
+    "maxArchSpan": 16,
+    "maxCantilever": 7
+  },
   "minecraft:chain_command_block": {
     "C": 30591.0,
     "S": 3059.0,
@@ -7548,7 +7556,7 @@
     "S": 10197100.0,
     "T": 10197100.0,
     "m": 6000.0,
-    "maxArchSpan": 64,
+    "maxArchSpan": 116,
     "maxCantilever": 57
   },
   "minecraft:repeater": {
