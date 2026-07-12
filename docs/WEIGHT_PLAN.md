@@ -1,7 +1,9 @@
 # Block Weight Plan — Structural Physics Mod (MC 26.2, server-only Fabric)
 
 Method: every block = 1 m³ of its real material. `mass_kg = density(kg/m³) × volume_factor(shape)`.
-All 1,254 registry blocks covered, 0 unassigned.
+The master table covers all 1,196 blocks reported by the vanilla 26.2 server data generator, plus
+59 compatibility rows retained from the original table (including the required `minecraft:chain`).
+There are zero unassigned vanilla registry ids.
 
 ## Material densities (kg/m³)
 
@@ -40,4 +42,29 @@ stone 2600 · cobblestone 2200 · stone slab 1300 · oak planks 700 · oak stair
 
 Weight is the *load*; each material also needs a *carry capacity* — how many kg a single block can hold up before the column/beam fails, derived from real compressive strength (stone ~50 MPa, wood ~5 MPa along grain, etc.) scaled down so gameplay thresholds land in the tens-of-blocks range. That gives: heavier material needs more supports; stacks need more support lower down (load accumulates downward); caves stay stable because natural stone spans have huge compressive capacity and only fail when a span/overhang exceeds its beam limit.
 
-Files: `blocks_all_26.2.txt` (raw registry), `block_weights.csv` (full table: id, category, density, volume, mass), `block_weights.json` (mod-config format `minecraft:id → kg`), `assign_weights.py` (regenerate/tweak).
+## Generated data workflow
+
+`data/master_blocks.csv` is the only editable source for block mass and strength data. Its columns
+are `id, material, density_kg_m3, volume_fraction, category, C_MPa, S_MPa, T_MPa, notes`.
+`tools/compute_strengths.py` applies the formulas in `docs/COLLAPSE_MATH.md` and deterministically
+writes both runtime JSON files. The JSON map schemas cannot carry a metadata key without becoming a
+fake block id, so this documentation and the generator's `--check` result are the generated-file
+marker convention.
+
+The imported rows deliberately use effective density and MPa inputs so all 1,254 existing numerical
+profiles remain byte-for-byte reproducible. Physical-material retuning belongs to issue 1B, not this
+pipeline change. `minecraft:chain` is the sole new profile: iron at the documented `0.03` chain/rod
+volume fraction.
+
+Run:
+
+```text
+python3 tools/compute_strengths.py
+python3 tools/compute_strengths.py --check --audit
+python3 -m unittest tests.test_compute_strengths -v
+```
+
+`data/vanilla_blocks_26.2.txt` is the committed coverage baseline. It was produced from the official
+26.2 server jar with the vanilla data generator's `--reports` mode and contains the ids from
+`generated/reports/blocks.json`. Rows intentionally ignored by the simulator are still explicit in
+the master CSV with `category=ignored`; missing registry ids therefore always mean a data bug.
