@@ -1,0 +1,5022 @@
+{
+  "minecraft:acacia_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:acacia_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:acacia_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:acacia_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:acacia_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:acacia_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:acacia_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:acacia_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:acacia_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:acacia_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:acacia_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:acacia_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:acacia_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:acacia_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:acacia_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:acacia_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:acacia_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:acacia_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:activator_rail": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:air": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:allium": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:amethyst_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:amethyst_cluster": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:ancient_debris": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:andesite": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:andesite_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:andesite_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:andesite_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:anvil": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:attached_melon_stem": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:attached_pumpkin_stem": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:azalea": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:azalea_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:azure_bluet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:bamboo_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:bamboo_mosaic": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_mosaic_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_mosaic_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:bamboo_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:bamboo_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:bamboo_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bamboo_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:bamboo_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:barrel": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:barrier": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:basalt": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:beacon": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bedrock": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:bee_nest": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:beehive": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:beetroots": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:bell": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:big_dripleaf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:big_dripleaf_stem": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:birch_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:birch_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:birch_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:birch_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:birch_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:birch_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:birch_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:birch_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:birch_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:birch_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:birch_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:birch_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:birch_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:birch_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:birch_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:birch_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:birch_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:birch_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:black_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:black_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:black_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:black_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:black_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:black_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:black_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:black_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:black_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:black_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:black_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:black_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:black_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:black_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:black_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:black_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blackstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blackstone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blackstone_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blackstone_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blast_furnace": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:blue_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:blue_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blue_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:blue_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:blue_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blue_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blue_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blue_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blue_ice": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blue_orchid": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:blue_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:blue_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blue_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blue_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blue_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:blue_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blue_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:blue_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bone_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bookshelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brain_coral": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brain_coral_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brain_coral_fan": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:brain_coral_wall_fan": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brewing_stand": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brown_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:brown_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brown_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:brown_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:brown_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brown_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brown_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brown_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brown_mushroom": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:brown_mushroom_block": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:brown_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:brown_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brown_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brown_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brown_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:brown_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brown_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:brown_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bubble_column": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:bubble_coral": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bubble_coral_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bubble_coral_fan": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:bubble_coral_wall_fan": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:budding_amethyst": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:bush": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cactus": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cactus_flower": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cake": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:calcite": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:calibrated_sculk_sensor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:campfire": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:carrots": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cartography_table": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:carved_pumpkin": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cauldron": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cave_air": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:cave_vines": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cave_vines_plant": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chain": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:chain_command_block": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cherry_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cherry_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cherry_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cherry_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cherry_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cherry_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cherry_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cherry_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cherry_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cherry_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cherry_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cherry_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cherry_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cherry_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cherry_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cherry_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cherry_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cherry_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chest": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:chipped_anvil": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_bookshelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_cinnabar": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_deepslate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_nether_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_polished_blackstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_quartz_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_red_sandstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_resin_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_sandstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_stone_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_sulfur": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_tuff": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chiseled_tuff_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:chorus_flower": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:chorus_plant": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cinnabar": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cinnabar_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cinnabar_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cinnabar_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cinnabar_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cinnabar_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cinnabar_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cinnabar_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:clay": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:closed_eyeblossom": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:coal_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:coal_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:coarse_dirt": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cobbled_deepslate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cobbled_deepslate_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cobbled_deepslate_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cobbled_deepslate_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cobblestone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cobblestone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cobblestone_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cobblestone_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cobweb": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cocoa": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:command_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:comparator": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:composter": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:conduit": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:copper_bars": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:copper_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:copper_bulb": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:copper_chain": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:copper_chest": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:copper_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:copper_golem_statue": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:copper_grate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:copper_lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:copper_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:copper_torch": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:copper_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:copper_wall_torch": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cornflower": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cracked_deepslate_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cracked_deepslate_tiles": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cracked_nether_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cracked_polished_blackstone_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cracked_stone_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crafter": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:crafting_table": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:creaking_heart": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:creeper_head": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:creeper_wall_head": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:crimson_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:crimson_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crimson_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crimson_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crimson_fungus": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:crimson_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:crimson_hyphae": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crimson_nylium": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crimson_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crimson_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:crimson_roots": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:crimson_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crimson_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:crimson_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crimson_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crimson_stem": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crimson_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:crimson_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:crimson_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:crying_obsidian": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cut_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cut_copper_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cut_copper_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cut_red_sandstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cut_red_sandstone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cut_sandstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cut_sandstone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cyan_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cyan_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cyan_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cyan_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cyan_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cyan_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cyan_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cyan_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cyan_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:cyan_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cyan_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cyan_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cyan_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:cyan_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cyan_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:cyan_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:damaged_anvil": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dandelion": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dark_oak_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dark_oak_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_oak_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_oak_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_oak_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dark_oak_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_oak_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_oak_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_oak_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dark_oak_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dark_oak_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_oak_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dark_oak_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_oak_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_oak_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_oak_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dark_oak_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dark_oak_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_prismarine": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_prismarine_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dark_prismarine_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:daylight_detector": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_brain_coral": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_brain_coral_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_brain_coral_fan": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dead_brain_coral_wall_fan": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_bubble_coral": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_bubble_coral_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_bubble_coral_fan": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dead_bubble_coral_wall_fan": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_bush": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dead_fire_coral": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_fire_coral_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_fire_coral_fan": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dead_fire_coral_wall_fan": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_horn_coral": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_horn_coral_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_horn_coral_fan": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dead_horn_coral_wall_fan": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_tube_coral": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_tube_coral_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dead_tube_coral_fan": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dead_tube_coral_wall_fan": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:decorated_pot": {
+    "category": "STRUCTURAL",
+    "failure": "POP"
+  },
+  "minecraft:deepslate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_coal_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_copper_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_diamond_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_emerald_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_gold_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_iron_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_lapis_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_redstone_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_tile_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_tile_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_tile_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:deepslate_tiles": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:detector_rail": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:diamond_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:diamond_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:diorite": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:diorite_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:diorite_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:diorite_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dirt": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dirt_path": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dispenser": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:dragon_egg": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dragon_head": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dragon_wall_head": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:dried_ghast": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dried_kelp_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dripstone_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:dropper": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:emerald_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:emerald_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:enchanting_table": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:end_gateway": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:end_portal": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:end_portal_frame": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:end_rod": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:end_stone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:end_stone_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:end_stone_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:end_stone_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:end_stone_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:ender_chest": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:exposed_chiseled_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:exposed_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:exposed_copper_bars": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:exposed_copper_bulb": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:exposed_copper_chain": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:exposed_copper_chest": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:exposed_copper_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:exposed_copper_golem_statue": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:exposed_copper_grate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:exposed_copper_lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:exposed_copper_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:exposed_cut_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:exposed_cut_copper_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:exposed_cut_copper_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:exposed_lightning_rod": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:farmland": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:fern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:fire": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:fire_coral": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:fire_coral_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:fire_coral_fan": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:fire_coral_wall_fan": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:firefly_bush": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:fletching_table": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:flower_pot": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:flowering_azalea": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:flowering_azalea_leaves": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:frogspawn": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:frosted_ice": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:furnace": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:gilded_blackstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:glow_lichen": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:glowstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gold_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gold_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:golden_dandelion": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:granite": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:granite_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:granite_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:granite_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:grass_block": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:gravel": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gray_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:gray_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gray_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:gray_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:gray_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gray_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gray_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gray_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gray_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:gray_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gray_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gray_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gray_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:gray_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gray_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:gray_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:green_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:green_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:green_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:green_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:green_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:green_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:green_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:green_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:green_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:green_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:green_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:green_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:green_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:green_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:green_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:green_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:grindstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:hanging_roots": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:hay_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:heavy_core": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:heavy_weighted_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:honey_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:honeycomb_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:hopper": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:horn_coral": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:horn_coral_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:horn_coral_fan": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:horn_coral_wall_fan": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:ice": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:infested_chiseled_stone_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:infested_cobblestone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:infested_cracked_stone_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:infested_deepslate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:infested_mossy_stone_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:infested_stone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:infested_stone_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:iron_bars": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:iron_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:iron_chain": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:iron_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:iron_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:iron_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:jack_o_lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:jigsaw": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:jukebox": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:jungle_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:jungle_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:jungle_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:jungle_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:jungle_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:jungle_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:jungle_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:jungle_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:jungle_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:jungle_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:jungle_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:jungle_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:jungle_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:jungle_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:jungle_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:jungle_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:jungle_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:jungle_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:kelp": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:kelp_plant": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:ladder": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:lapis_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lapis_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:large_amethyst_bud": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:large_fern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:lava": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:lava_cauldron": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:leaf_litter": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lectern": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lever": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:light": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:light_blue_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:light_blue_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_blue_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:light_blue_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:light_blue_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_blue_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_blue_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_blue_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_blue_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:light_blue_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_blue_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_blue_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_blue_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:light_blue_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_blue_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_blue_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_gray_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:light_gray_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_gray_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:light_gray_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:light_gray_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_gray_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_gray_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_gray_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_gray_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:light_gray_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_gray_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_gray_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_gray_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:light_gray_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_gray_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_gray_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:light_weighted_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:lightning_rod": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lilac": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lily_of_the_valley": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lily_pad": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:lime_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:lime_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lime_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:lime_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:lime_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lime_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lime_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lime_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lime_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:lime_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lime_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lime_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lime_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:lime_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lime_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lime_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:lodestone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:loom": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magenta_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:magenta_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magenta_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:magenta_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:magenta_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magenta_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magenta_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magenta_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magenta_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:magenta_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magenta_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magenta_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magenta_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:magenta_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magenta_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magenta_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:magma_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:mangrove_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:mangrove_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:mangrove_propagule": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_roots": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:mangrove_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:mangrove_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mangrove_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:mangrove_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:mangrove_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:medium_amethyst_bud": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:melon": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:melon_stem": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:moss_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:moss_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mossy_cobblestone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mossy_cobblestone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mossy_cobblestone_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mossy_cobblestone_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mossy_stone_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mossy_stone_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mossy_stone_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mossy_stone_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:moving_piston": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:mud": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mud_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mud_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mud_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:mud_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:muddy_mangrove_roots": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:mushroom_stem": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:mycelium": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:nether_brick_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:nether_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:nether_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:nether_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:nether_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:nether_gold_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:nether_portal": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:nether_quartz_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:nether_sprouts": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:nether_wart": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:nether_wart_block": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:netherite_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:netherrack": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:note_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oak_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:oak_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oak_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oak_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oak_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:oak_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oak_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oak_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oak_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:oak_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:oak_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oak_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:oak_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oak_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oak_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oak_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:oak_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:oak_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:observer": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:obsidian": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:ochre_froglight": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:open_eyeblossom": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:orange_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:orange_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:orange_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_poplar_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:orange_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_tulip": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:orange_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:orange_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:orange_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxeye_daisy": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_chiseled_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_copper_bars": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_copper_bulb": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_copper_chain": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:oxidized_copper_chest": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:oxidized_copper_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_copper_golem_statue": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_copper_grate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_copper_lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:oxidized_copper_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_cut_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_cut_copper_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_cut_copper_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:oxidized_lightning_rod": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:packed_ice": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:packed_mud": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_hanging_moss": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_moss_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_moss_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_oak_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pale_oak_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_oak_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_oak_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_oak_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pale_oak_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_oak_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_oak_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_oak_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pale_oak_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pale_oak_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_oak_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pale_oak_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_oak_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_oak_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pale_oak_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pale_oak_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pale_oak_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pearlescent_froglight": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:peony": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:petrified_oak_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:piglin_head": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:piglin_wall_head": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pink_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pink_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pink_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pink_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pink_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pink_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pink_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pink_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pink_petals": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pink_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:pink_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pink_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pink_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pink_tulip": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pink_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pink_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pink_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pink_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:piston": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:piston_head": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:pitcher_crop": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:pitcher_plant": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:player_head": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:player_wall_head": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:podzol": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pointed_dripstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_andesite": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_andesite_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_andesite_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_basalt": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_blackstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_blackstone_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_blackstone_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_blackstone_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_blackstone_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_blackstone_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:polished_blackstone_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:polished_blackstone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_blackstone_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_blackstone_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_cinnabar": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_cinnabar_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_cinnabar_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_cinnabar_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_deepslate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_deepslate_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_deepslate_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_deepslate_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_diorite": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_diorite_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_diorite_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_granite": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_granite_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_granite_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_sulfur": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_sulfur_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_sulfur_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_sulfur_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_tuff": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_tuff_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_tuff_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:polished_tuff_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:poplar_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:poplar_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:poplar_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:poplar_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:poplar_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:poplar_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:poplar_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:poplar_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:poplar_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:poplar_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:poplar_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:poplar_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:poplar_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:poplar_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:poplar_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:poplar_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:poplar_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:poppy": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potatoes": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potent_sulfur": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:potted_acacia_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_allium": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_azalea_bush": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_azure_bluet": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_bamboo": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_birch_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_blue_orchid": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_brown_mushroom": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_cactus": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_cherry_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_closed_eyeblossom": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_cornflower": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_crimson_fungus": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_crimson_roots": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_dandelion": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_dark_oak_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_dead_bush": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_fern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_flowering_azalea_bush": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_golden_dandelion": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_jungle_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_lily_of_the_valley": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_mangrove_propagule": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_oak_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_open_eyeblossom": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_orange_tulip": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_oxeye_daisy": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_pale_oak_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_pink_tulip": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_poplar_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_poppy": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_red_mushroom": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_red_tulip": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_spruce_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_torchflower": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_warped_fungus": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_warped_roots": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_white_tulip": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:potted_wither_rose": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:powder_snow": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:powder_snow_cauldron": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:powered_rail": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:prismarine": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:prismarine_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:prismarine_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:prismarine_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:prismarine_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:prismarine_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:prismarine_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pumpkin": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:pumpkin_stem": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purple_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:purple_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purple_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:purple_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:purple_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purple_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purple_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purple_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purple_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:purple_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purple_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purple_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purple_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:purple_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purple_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purple_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purpur_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purpur_pillar": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purpur_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:purpur_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:quartz_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:quartz_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:quartz_pillar": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:quartz_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:quartz_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:rail": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:raw_copper_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:raw_gold_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:raw_iron_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:red_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:red_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:red_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_mushroom": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:red_mushroom_block": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:red_nether_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_nether_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_nether_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_nether_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_poplar_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_sand": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_sandstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_sandstone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_sandstone_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_sandstone_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_shrub": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:red_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_tulip": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:red_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:red_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:red_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:redstone_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:redstone_lamp": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:redstone_ore": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:redstone_torch": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:redstone_wall_torch": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:redstone_wire": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:reinforced_deepslate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:repeater": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:repeating_command_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:resin_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:resin_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:resin_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:resin_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:resin_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:resin_clump": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:respawn_anchor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:rooted_dirt": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:rose_bush": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:sand": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sandstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sandstone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sandstone_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sandstone_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:scaffolding": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sculk": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sculk_catalyst": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sculk_sensor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sculk_shrieker": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sculk_vein": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sea_lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:sea_pickle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:seagrass": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:shelf_mushroom": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:short_dry_grass": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:short_grass": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:shroomlight": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:skeleton_skull": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:skeleton_wall_skull": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:slime_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:small_amethyst_bud": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:small_dripleaf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smithing_table": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smoker": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_basalt": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_quartz": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_quartz_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_quartz_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_red_sandstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_red_sandstone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_red_sandstone_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_sandstone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_sandstone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_sandstone_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_stone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:smooth_stone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sniffer_egg": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:snow": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:snow_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:soul_campfire": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:soul_fire": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:soul_lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:soul_sand": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:soul_soil": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:soul_torch": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:soul_wall_torch": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:spawner": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:sponge": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spore_blossom": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spruce_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:spruce_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spruce_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spruce_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spruce_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:spruce_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spruce_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spruce_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spruce_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:spruce_sapling": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:spruce_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spruce_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:spruce_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spruce_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spruce_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:spruce_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:spruce_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:spruce_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sticky_piston": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stone": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stone_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stone_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stone_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stone_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stone_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:stone_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:stone_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stone_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stonecutter": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:straw_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_acacia_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_acacia_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_bamboo_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_birch_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_birch_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_cherry_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_cherry_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_crimson_hyphae": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_crimson_stem": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_dark_oak_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_dark_oak_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_jungle_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_jungle_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_mangrove_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_mangrove_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_oak_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_oak_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_pale_oak_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_pale_oak_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_poplar_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_poplar_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_spruce_log": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_spruce_wood": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_warped_hyphae": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:stripped_warped_stem": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:structure_block": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:structure_void": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:sugar_cane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sulfur": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sulfur_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sulfur_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sulfur_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sulfur_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sulfur_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sulfur_spike": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sulfur_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sulfur_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sunflower": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:suspicious_gravel": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:suspicious_sand": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:sweet_berry_bush": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:tall_dry_grass": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:tall_grass": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:tall_seagrass": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:target": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:test_block": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:test_instance_block": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:tinted_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:tnt": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:torch": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:torchflower": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:torchflower_crop": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:trapped_chest": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:trial_spawner": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:tripwire": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:tripwire_hook": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:tube_coral": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:tube_coral_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:tube_coral_fan": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:tube_coral_wall_fan": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:tuff": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:tuff_brick_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:tuff_brick_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:tuff_brick_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:tuff_bricks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:tuff_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:tuff_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:tuff_wall": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:turtle_egg": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:twisting_vines": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:twisting_vines_plant": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:vault": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:verdant_froglight": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:vine": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:void_air": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:wall_torch": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:warped_button": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:warped_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:warped_fence": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:warped_fence_gate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:warped_fungus": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:warped_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:warped_hyphae": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:warped_nylium": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:warped_planks": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:warped_pressure_plate": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:warped_roots": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:warped_shelf": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:warped_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:warped_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:warped_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:warped_stem": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:warped_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:warped_wall_hanging_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:warped_wall_sign": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:warped_wart_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:water": {
+    "category": "IGNORED",
+    "failure": "NEVER"
+  },
+  "minecraft:water_cauldron": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_chiseled_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_copper_bars": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_copper_block": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_copper_bulb": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_copper_chain": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:waxed_copper_chest": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:waxed_copper_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_copper_golem_statue": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_copper_grate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_copper_lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:waxed_copper_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_cut_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_cut_copper_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_cut_copper_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_chiseled_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_copper_bars": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_copper_bulb": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_copper_chain": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:waxed_exposed_copper_chest": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:waxed_exposed_copper_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_copper_golem_statue": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_copper_grate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_copper_lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:waxed_exposed_copper_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_cut_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_cut_copper_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_cut_copper_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_exposed_lightning_rod": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_lightning_rod": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_chiseled_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_copper_bars": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_copper_bulb": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_copper_chain": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:waxed_oxidized_copper_chest": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:waxed_oxidized_copper_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_copper_golem_statue": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_copper_grate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_copper_lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:waxed_oxidized_copper_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_cut_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_cut_copper_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_cut_copper_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_oxidized_lightning_rod": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_chiseled_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_copper_bars": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_copper_bulb": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_copper_chain": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:waxed_weathered_copper_chest": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:waxed_weathered_copper_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_copper_golem_statue": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_copper_grate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_copper_lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:waxed_weathered_copper_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_cut_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_cut_copper_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_cut_copper_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:waxed_weathered_lightning_rod": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_chiseled_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_copper_bars": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_copper_bulb": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_copper_chain": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:weathered_copper_chest": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:weathered_copper_door": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_copper_golem_statue": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_copper_grate": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_copper_lantern": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:weathered_copper_trapdoor": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_cut_copper": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_cut_copper_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_cut_copper_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weathered_lightning_rod": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weeping_vines": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:weeping_vines_plant": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:wet_sponge": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:wheat": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:white_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:white_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:white_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:white_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:white_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:white_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:white_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:white_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:white_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:white_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:white_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:white_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:white_tulip": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:white_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:white_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:white_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:white_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:wildflowers": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:wither_rose": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:wither_skeleton_skull": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:wither_skeleton_wall_skull": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:yellow_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:yellow_bed": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:yellow_candle": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:yellow_candle_cake": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:yellow_carpet": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:yellow_concrete": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:yellow_concrete_powder": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:yellow_glazed_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:yellow_poplar_leaves": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:yellow_shulker_box": {
+    "category": "STRUCTURAL",
+    "failure": "NEVER"
+  },
+  "minecraft:yellow_stained_glass": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:yellow_stained_glass_pane": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:yellow_terracotta": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:yellow_wall_banner": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:yellow_wool": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:yellow_wool_slab": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:yellow_wool_stairs": {
+    "category": "STRUCTURAL",
+    "failure": "FALL"
+  },
+  "minecraft:zombie_head": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  },
+  "minecraft:zombie_wall_head": {
+    "category": "ATTACHED",
+    "failure": "POP"
+  }
+}

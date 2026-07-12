@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = ROOT / "data/master_blocks.csv"
 DEFAULT_WEIGHTS = ROOT / "src/main/resources/data/unsupported/block_weights.json"
 DEFAULT_STRENGTHS = ROOT / "src/main/resources/data/unsupported/block_strengths.json"
+DEFAULT_PHYSICS = ROOT / "src/main/resources/data/unsupported/block_physics.json"
 DEFAULT_WEIGHTS_DOC = ROOT / "docs/BLOCK_WEIGHTS.md"
 DEFAULT_REGISTRY = ROOT / "data/vanilla_blocks_26.2.txt"
 SAFETY_FACTOR = Decimal("100")
@@ -80,9 +81,10 @@ def read_rows(path: Path) -> list[dict[str, str]]:
     return rows
 
 
-def generate(path: Path = DEFAULT_INPUT) -> tuple[dict[str, float], dict[str, dict[str, float | int]]]:
+def generate(path: Path = DEFAULT_INPUT):
     weights: dict[str, float] = {}
     strengths: dict[str, dict[str, float | int]] = {}
+    physics: dict[str, dict[str, str]] = {}
     for row in read_rows(path):
         block_id = row["id"]
         mass = rounded_decimal(
@@ -101,7 +103,8 @@ def generate(path: Path = DEFAULT_INPUT) -> tuple[dict[str, float], dict[str, di
             "maxArchSpan": max_arch_span(mass, carry),
             "maxCantilever": max_cantilever(mass, shear),
         }
-    return weights, strengths
+        physics[block_id] = {"category": row["category"], "failure": row["failure"]}
+    return weights, strengths, physics
 
 
 def rendered(data: object) -> str:
@@ -155,6 +158,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--weights-output", type=Path, default=DEFAULT_WEIGHTS)
     parser.add_argument("--strengths-output", type=Path, default=DEFAULT_STRENGTHS)
+    parser.add_argument("--physics-output", type=Path, default=DEFAULT_PHYSICS)
     parser.add_argument("--weights-doc-output", type=Path, default=DEFAULT_WEIGHTS_DOC)
     parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
     parser.add_argument("--check", action="store_true")
@@ -164,9 +168,10 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    weights, strengths = generate(args.input)
+    weights, strengths, physics = generate(args.input)
     weights_text = rendered(weights)
     strengths_text = rendered(strengths)
+    physics_text = rendered(physics)
     rows = read_rows(args.input)
     weights_doc_text = render_weights_doc(rows, weights)
 
@@ -174,10 +179,12 @@ def main() -> int:
     if args.check:
         ok &= check_file(args.weights_output, weights_text)
         ok &= check_file(args.strengths_output, strengths_text)
+        ok &= check_file(args.physics_output, physics_text)
         ok &= check_file(args.weights_doc_output, weights_doc_text)
     else:
         args.weights_output.write_text(weights_text, encoding="utf-8")
         args.strengths_output.write_text(strengths_text, encoding="utf-8")
+        args.physics_output.write_text(physics_text, encoding="utf-8")
         args.weights_doc_output.write_text(weights_doc_text, encoding="utf-8")
 
     if args.audit:

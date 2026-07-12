@@ -14,6 +14,7 @@ MASTER = ROOT / "data" / "master_blocks.csv"
 WEIGHTS = ROOT / "src/main/resources/data/unsupported/block_weights.json"
 STRENGTHS = ROOT / "src/main/resources/data/unsupported/block_strengths.json"
 WEIGHTS_DOC = ROOT / "docs" / "BLOCK_WEIGHTS.md"
+PHYSICS = ROOT / "src/main/resources/data/unsupported/block_physics.json"
 REGISTRY = ROOT / "data" / "vanilla_blocks_26.2.txt"
 
 
@@ -30,11 +31,21 @@ class ComputeStrengthsTest(unittest.TestCase):
     def test_master_csv_generates_committed_resources(self):
         generator = load_generator()
 
-        weights, strengths = generator.generate(MASTER)
+        weights, strengths, _ = generator.generate(MASTER)
 
         self.assertEqual(weights, json.loads(WEIGHTS.read_text()))
         self.assertEqual(strengths, json.loads(STRENGTHS.read_text()))
         self.assertEqual(set(weights), set(strengths))
+
+    def test_master_csv_generates_structural_classification_and_failure_mode(self):
+        generator = load_generator()
+        _, _, physics = generator.generate(MASTER)
+
+        self.assertEqual(physics, json.loads(PHYSICS.read_text()))
+        self.assertEqual(physics["minecraft:stone"], {"category": "STRUCTURAL", "failure": "FALL"})
+        self.assertEqual(physics["minecraft:torch"], {"category": "ATTACHED", "failure": "POP"})
+        self.assertEqual(physics["minecraft:redstone_wire"], {"category": "IGNORED", "failure": "NEVER"})
+        self.assertEqual(physics["minecraft:chest"]["failure"], "NEVER")
 
     def test_check_rejects_stale_generated_file(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -70,13 +81,13 @@ class ComputeStrengthsTest(unittest.TestCase):
 
         self.assertEqual(missing, [])
         self.assertIn("minecraft:chain", {row["id"] for row in rows})
-        self.assertTrue(all(row["category"] == "ignored" for row in rows if row["id"] in generator.IGNORED_IDS))
+        self.assertTrue(all(row["category"] == "IGNORED" for row in rows if row["id"] in generator.IGNORED_IDS))
         self.assertIsInstance(extra, list)
 
     def test_geometry_and_named_mass_invariants(self):
         generator = load_generator()
         rows = {row["id"]: row for row in generator.read_rows(MASTER)}
-        weights, _ = generator.generate(MASTER)
+        weights, _, _ = generator.generate(MASTER)
 
         self.assertEqual(float(rows["minecraft:stone_slab"]["volume_fraction"]), 0.5)
         self.assertEqual(float(rows["minecraft:stone_stairs"]["volume_fraction"]), 0.75)
@@ -101,7 +112,7 @@ class ComputeStrengthsTest(unittest.TestCase):
     def test_thin_blocks_stay_below_mass_limit_unless_documented(self):
         generator = load_generator()
         rows = generator.read_rows(MASTER)
-        weights, _ = generator.generate(MASTER)
+        weights, _, _ = generator.generate(MASTER)
 
         violations = [
             row["id"]
@@ -116,7 +127,7 @@ class ComputeStrengthsTest(unittest.TestCase):
     def test_weights_document_is_generated_from_master_csv(self):
         generator = load_generator()
         rows = generator.read_rows(MASTER)
-        weights, _ = generator.generate(MASTER)
+        weights, _, _ = generator.generate(MASTER)
 
         self.assertEqual(WEIGHTS_DOC.read_text(), generator.render_weights_doc(rows, weights))
 

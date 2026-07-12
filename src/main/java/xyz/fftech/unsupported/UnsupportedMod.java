@@ -28,6 +28,7 @@ public class UnsupportedMod implements ModInitializer {
     public void onInitialize() {
         BlockWeights.load(LOGGER);
         BlockStrengths.load(LOGGER);
+        BlockPhysics.load(LOGGER);
         UnsupportedConfig config = UnsupportedConfig.load(LOGGER);
         registerCommands();
         BlockUpdateHooks.register(config, LOGGER);

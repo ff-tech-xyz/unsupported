@@ -73,11 +73,19 @@ tasks.register("configMigrationTest", JavaExec) {
 	mainClass = "xyz.fftech.unsupported.UnsupportedConfigMigrationTest"
 }
 
+tasks.register("supportLogicTest", JavaExec) {
+	group = "verification"
+	description = "Runs pure support load-tree regression tests"
+	dependsOn testClasses
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = "xyz.fftech.unsupported.support.SupportLogicTest"
+}
+
 test {
 	failOnNoDiscoveredTests = false
 }
 
-check.dependsOn configMigrationTest
+check.dependsOn configMigrationTest, supportLogicTest
 
 jar {
 	inputs.property "archivesName", project.base.archivesName

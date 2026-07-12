@@ -4,7 +4,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.state.BlockState;
+import xyz.fftech.unsupported.BlockPhysics;
 import xyz.fftech.unsupported.BlockStrengths;
+import xyz.fftech.unsupported.BlockWeights;
 import xyz.fftech.unsupported.StrengthProfile;
 import xyz.fftech.unsupported.UnsupportedConfig;
 
@@ -12,162 +14,146 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Set;
 
 public final class SupportScanner {
     private final UnsupportedConfig config;
 
-    public SupportScanner(UnsupportedConfig config) {
-        this.config = config;
-    }
+    public SupportScanner(UnsupportedConfig config) { this.config = config; }
 
     public SupportScanResult scan(ServerLevel level, BlockPos origin) {
-        Map<BlockPos, StrengthProfile> nodes = collectSolidRegion(level, origin);
-        if (nodes.isEmpty()) {
-            return new SupportScanResult(origin.immutable(), 0, List.of(), SupportStatus.SUPPORTED);
+        Region region = collectSolidRegion(level, origin);
+        if (region.nodes.isEmpty()) return new SupportScanResult(origin.immutable(), 0, List.of(), SupportStatus.SUPPORTED);
+        if (region.limitReached) return new SupportScanResult(origin.immutable(), region.nodes.size(), List.of(), SupportStatus.LIMIT_REACHED);
+
+        Map<BlockPos, Integer> distance = supportDistances(level, region.nodes);
+        Map<BlockPos, LoadTree.Node> tree = new LinkedHashMap<>();
+        for (var entry : region.nodes.entrySet()) {
+            StrengthProfile p = entry.getValue().profile;
+            tree.put(entry.getKey(), new LoadTree.Node(entry.getKey().toShortString(), entry.getValue().effectiveMass, p.carryKg(), p.shearKg(), p.tensionKg()));
+        }
+        for (BlockPos pos : region.nodes.keySet()) {
+            Parent parent = chooseParent(region.nodes, distance, pos);
+            if (parent != null) tree.get(pos).attach(tree.get(parent.pos), parent.edge, parent.momentArm);
         }
 
-        boolean limitReached = nodes.size() >= config.scanCap;
-        Set<BlockPos> supported = new HashSet<>();
-        for (BlockPos pos : nodes.keySet()) {
-            if (hasExternalDownSupport(level, nodes, pos)) {
-                supported.add(pos);
-            }
+        Set<BlockPos> failed = new HashSet<>();
+        for (BlockPos pos : region.nodes.keySet()) if (!distance.containsKey(pos)) failed.add(pos);
+        Map<String, BlockPos> byId = new HashMap<>();
+        tree.forEach((pos, node) -> byId.put(node.id(), pos));
+        for (LoadTree.Node node : LoadTree.evaluate(new ArrayList<>(tree.values()))) failed.add(byId.get(node.id()));
+
+        List<BlockPos> collapse = new ArrayList<>();
+        for (BlockPos pos : failed) {
+            collapse.add(pos.immutable());
+            for (BlockPos attached : region.nodes.get(pos).attached) collapse.add(attached.immutable());
         }
-
-        boolean changed;
-        do {
-            changed = false;
-            for (Map.Entry<BlockPos, StrengthProfile> entry : nodes.entrySet()) {
-                BlockPos pos = entry.getKey();
-                if (supported.contains(pos)) {
-                    continue;
-                }
-                StrengthProfile profile = entry.getValue();
-                if (isSupportedByBelow(nodes, supported, pos, profile)
-                    || isSupportedBySide(nodes, supported, pos, profile)
-                    || isSupportedByArch(nodes, supported, pos, profile)
-                    || isSupportedByAbove(nodes, supported, pos, profile)) {
-                    supported.add(pos);
-                    changed = true;
-                }
-            }
-        } while (changed);
-
-        List<BlockPos> failed = new ArrayList<>();
-        if (!limitReached) {
-            for (BlockPos pos : nodes.keySet()) {
-                if (!supported.contains(pos)) {
-                    failed.add(pos.immutable());
-                }
-            }
-        }
-
-        SupportStatus status = limitReached ? SupportStatus.LIMIT_REACHED : failed.isEmpty() ? SupportStatus.SUPPORTED : SupportStatus.FAILED;
-        return new SupportScanResult(origin.immutable(), nodes.size(), List.copyOf(failed), status);
+        SupportStatus status = collapse.isEmpty() ? SupportStatus.SUPPORTED : SupportStatus.FAILED;
+        return new SupportScanResult(origin.immutable(), region.nodes.size(), List.copyOf(collapse), status);
     }
 
-    private Map<BlockPos, StrengthProfile> collectSolidRegion(ServerLevel level, BlockPos origin) {
-        Map<BlockPos, StrengthProfile> nodes = new HashMap<>();
+    private Region collectSolidRegion(ServerLevel level, BlockPos origin) {
+        Map<BlockPos, NodeData> nodes = new LinkedHashMap<>();
+        Set<BlockPos> visited = new HashSet<>();
         ArrayDeque<BlockPos> queue = new ArrayDeque<>();
-        enqueueIfCandidate(level, origin, origin, queue, nodes);
-        for (Direction direction : Direction.values()) {
-            enqueueIfCandidate(level, origin.relative(direction), origin, queue, nodes);
-        }
-
-        while (!queue.isEmpty() && nodes.size() < config.scanCap) {
+        queue.add(origin.immutable());
+        for (Direction direction : Direction.values()) queue.add(origin.relative(direction).immutable());
+        boolean limitReached = false;
+        while (!queue.isEmpty()) {
             BlockPos pos = queue.removeFirst();
+            if (!visited.add(pos) || distanceTooLarge(origin, pos)) continue;
+            BlockState state = level.getBlockState(pos);
+            if (BlockPhysics.category(state) != BlockCategory.STRUCTURAL) continue;
+            var profile = BlockStrengths.get(state.getBlock());
+            if (profile.isEmpty()) continue;
+            if (nodes.size() >= config.scanCap) { limitReached = true; break; }
+            List<BlockPos> attached = attachedTo(level, pos);
+            double mass = StateMassModifiers.apply(profile.get().massKg(), state);
+            for (BlockPos attachment : attached) {
+                BlockState attachedState = level.getBlockState(attachment);
+                mass += BlockWeights.get(attachedState.getBlock()).orElse(0.0);
+            }
+            nodes.put(pos, new NodeData(profile.get(), mass, attached));
+            for (Direction direction : Direction.values()) queue.addLast(pos.relative(direction).immutable());
+        }
+        return new Region(nodes, limitReached);
+    }
+
+    private List<BlockPos> attachedTo(ServerLevel level, BlockPos host) {
+        List<BlockPos> result = new ArrayList<>();
+        for (Direction direction : Direction.values()) {
+            BlockPos pos = host.relative(direction);
+            BlockState state = level.getBlockState(pos);
+            if (BlockPhysics.category(state) == BlockCategory.ATTACHED && AttachmentResolver.host(pos, state).equals(host)) result.add(pos.immutable());
+        }
+        return result;
+    }
+
+    private Map<BlockPos, Integer> supportDistances(ServerLevel level, Map<BlockPos, NodeData> nodes) {
+        Map<BlockPos, Integer> distance = new HashMap<>();
+        ArrayDeque<BlockPos> queue = new ArrayDeque<>();
+        for (BlockPos pos : nodes.keySet()) {
+            if (hasExternalDownSupport(level, nodes, pos)) { distance.put(pos, 0); queue.add(pos); }
+        }
+        while (!queue.isEmpty()) {
+            BlockPos pos = queue.removeFirst();
+            int nextDistance = distance.get(pos) + 1;
             for (Direction direction : Direction.values()) {
                 BlockPos next = pos.relative(direction);
-                enqueueIfCandidate(level, next, origin, queue, nodes);
-                if (nodes.size() >= config.scanCap) {
-                    break;
-                }
+                if (nodes.containsKey(next) && !distance.containsKey(next)) { distance.put(next, nextDistance); queue.addLast(next); }
             }
         }
-        return nodes;
+        return distance;
     }
 
-    private void enqueueIfCandidate(ServerLevel level, BlockPos pos, BlockPos origin, ArrayDeque<BlockPos> queue, Map<BlockPos, StrengthProfile> nodes) {
-        BlockPos immutable = pos.immutable();
-        if (nodes.containsKey(immutable) || queue.contains(immutable)) {
-            return;
-        }
-        if (distanceTooLarge(origin, immutable)) {
-            return;
-        }
-        BlockState state = level.getBlockState(immutable);
-        if (!isCollapsibleSolid(state)) {
-            return;
-        }
-        Optional<StrengthProfile> profile = BlockStrengths.get(state.getBlock());
-        if (profile.isEmpty()) {
-            return;
-        }
-        nodes.put(immutable, profile.get());
-        queue.addLast(immutable);
-    }
-
-    public static boolean isCollapsibleSolid(BlockState state) {
-        return !state.isAir() && !state.liquid() && state.blocksMotion();
-    }
-
-    private boolean distanceTooLarge(BlockPos origin, BlockPos pos) {
-        return Math.abs(origin.getX() - pos.getX()) > config.maxScanRadius
-            || Math.abs(origin.getY() - pos.getY()) > config.maxScanRadius
-            || Math.abs(origin.getZ() - pos.getZ()) > config.maxScanRadius;
-    }
-
-    private boolean hasExternalDownSupport(ServerLevel level, Map<BlockPos, StrengthProfile> nodes, BlockPos pos) {
-        if (pos.getY() <= level.getMinY()) {
-            return true;
-        }
+    private Parent chooseParent(Map<BlockPos, NodeData> nodes, Map<BlockPos, Integer> distance, BlockPos pos) {
+        Integer own = distance.get(pos);
+        if (own == null || own == 0) return null;
         BlockPos below = pos.below();
-        if (nodes.containsKey(below)) {
-            return false;
-        }
-        return isCollapsibleSolid(level.getBlockState(below));
-    }
-
-    private boolean isSupportedByBelow(Map<BlockPos, StrengthProfile> nodes, Set<BlockPos> supported, BlockPos pos, StrengthProfile profile) {
-        BlockPos below = pos.below();
-        StrengthProfile parent = nodes.get(below);
-        return parent != null && supported.contains(below) && profile.massKg() <= parent.carryKg();
-    }
-
-    private boolean isSupportedBySide(Map<BlockPos, StrengthProfile> nodes, Set<BlockPos> supported, BlockPos pos, StrengthProfile profile) {
+        if (isCloser(distance, below, own)) return new Parent(below, SupportEdgeType.DOWN, 1);
+        Parent arch = archParent(nodes, distance, pos, own, Direction.NORTH, Direction.SOUTH);
+        if (arch == null) arch = archParent(nodes, distance, pos, own, Direction.EAST, Direction.WEST);
+        if (arch != null) return arch;
+        BlockPos best = null;
+        double bestShear = -1;
         for (Direction direction : Direction.Plane.HORIZONTAL) {
             BlockPos side = pos.relative(direction);
-            StrengthProfile parent = nodes.get(side);
-            if (parent != null && supported.contains(side) && profile.massKg() <= parent.shearKg()) {
-                return true;
-            }
+            if (isCloser(distance, side, own) && nodes.get(side).profile.shearKg() > bestShear) { best = side; bestShear = nodes.get(side).profile.shearKg(); }
         }
-        return false;
-    }
-
-    private boolean isSupportedByArch(Map<BlockPos, StrengthProfile> nodes, Set<BlockPos> supported, BlockPos pos, StrengthProfile profile) {
-        return archPairSupports(nodes, supported, pos, profile, Direction.NORTH, Direction.SOUTH)
-            || archPairSupports(nodes, supported, pos, profile, Direction.EAST, Direction.WEST);
-    }
-
-    private boolean archPairSupports(Map<BlockPos, StrengthProfile> nodes, Set<BlockPos> supported, BlockPos pos, StrengthProfile profile, Direction a, Direction b) {
-        BlockPos pa = pos.relative(a);
-        BlockPos pb = pos.relative(b);
-        StrengthProfile left = nodes.get(pa);
-        StrengthProfile right = nodes.get(pb);
-        return left != null && right != null
-            && supported.contains(pa) && supported.contains(pb)
-            && profile.massKg() <= Math.min(left.carryKg(), right.carryKg())
-            && profile.maxArchSpan >= 1;
-    }
-
-    private boolean isSupportedByAbove(Map<BlockPos, StrengthProfile> nodes, Set<BlockPos> supported, BlockPos pos, StrengthProfile profile) {
+        if (best != null) return new Parent(best, SupportEdgeType.SIDE, own);
         BlockPos above = pos.above();
-        StrengthProfile parent = nodes.get(above);
-        return parent != null && supported.contains(above) && profile.massKg() <= parent.tensionKg();
+        return isCloser(distance, above, own) ? new Parent(above, SupportEdgeType.HANG, 1) : null;
     }
+
+    private Parent archParent(Map<BlockPos, NodeData> nodes, Map<BlockPos, Integer> distance, BlockPos pos, int own, Direction a, Direction b) {
+        BlockPos pa = pos.relative(a), pb = pos.relative(b);
+        if (!isCloser(distance, pa, own) || !isCloser(distance, pb, own)) return null;
+        int span = distance.get(pa) + distance.get(pb) + 2;
+        int cap = Math.min(nodes.get(pa).profile.maxArchSpan, nodes.get(pb).profile.maxArchSpan);
+        return span <= cap ? new Parent(nodes.get(pa).profile.carryKg() >= nodes.get(pb).profile.carryKg() ? pa : pb, SupportEdgeType.ARCH, 1) : null;
+    }
+
+    private static boolean isCloser(Map<BlockPos, Integer> distance, BlockPos pos, int own) {
+        Integer candidate = distance.get(pos);
+        return candidate != null && candidate < own;
+    }
+
+    public static boolean isCollapsibleSolid(BlockState state) { return BlockPhysics.category(state) == BlockCategory.STRUCTURAL; }
+
+    private boolean distanceTooLarge(BlockPos origin, BlockPos pos) {
+        return Math.abs(origin.getX() - pos.getX()) > config.maxScanRadius || Math.abs(origin.getY() - pos.getY()) > config.maxScanRadius || Math.abs(origin.getZ() - pos.getZ()) > config.maxScanRadius;
+    }
+
+    private boolean hasExternalDownSupport(ServerLevel level, Map<BlockPos, NodeData> nodes, BlockPos pos) {
+        if (pos.getY() <= level.getMinY()) return true;
+        BlockPos below = pos.below();
+        return !nodes.containsKey(below) && BlockPhysics.category(level.getBlockState(below)) == BlockCategory.STRUCTURAL;
+    }
+
+    private record NodeData(StrengthProfile profile, double effectiveMass, List<BlockPos> attached) {}
+    private record Region(Map<BlockPos, NodeData> nodes, boolean limitReached) {}
+    private record Parent(BlockPos pos, SupportEdgeType edge, int momentArm) {}
 }

@@ -5,6 +5,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.slf4j.Logger;
+import xyz.fftech.unsupported.BlockPhysics;
 import xyz.fftech.unsupported.UnsupportedConfig;
 
 import java.util.ArrayDeque;
@@ -89,7 +90,14 @@ public final class CollapseQueue {
 
     private boolean collapseBlock(ServerLevel level, BlockPos pos) {
         BlockState state = level.getBlockState(pos);
-        if (!SupportScanner.isCollapsibleSolid(state) || level.getBlockEntity(pos) != null) {
+        FailureMode mode = BlockPhysics.failure(state);
+        if (state.isAir() || mode == FailureMode.NEVER) {
+            return false;
+        }
+        if (mode == FailureMode.POP) {
+            return level.destroyBlock(pos, true);
+        }
+        if (level.getBlockEntity(pos) != null) {
             return false;
         }
         try {
