@@ -11,25 +11,25 @@
     "C": 6692.0,
     "S": 4780.0,
     "T": 2868.0,
-    "m": 144.4,
-    "maxArchSpan": 19,
-    "maxCantilever": 7
+    "m": 100.0,
+    "maxArchSpan": 23,
+    "maxCantilever": 9
   },
   "minecraft:acacia_fence": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 192.5,
-    "maxArchSpan": 19,
-    "maxCantilever": 7
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:acacia_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 192.5,
-    "maxArchSpan": 19,
-    "maxCantilever": 7
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:acacia_hanging_sign": {
     "C": 1071.0,
@@ -147,9 +147,9 @@
     "C": 5099.0,
     "S": 5099.0,
     "T": 5099.0,
-    "m": 157.4,
-    "maxArchSpan": 16,
-    "maxCantilever": 7
+    "m": 60.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 12
   },
   "minecraft:air": {
     "C": 0.0,
@@ -299,25 +299,25 @@
     "C": 6692.0,
     "S": 4780.0,
     "T": 2868.0,
-    "m": 131.2,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 23,
+    "maxCantilever": 9
   },
   "minecraft:bamboo_fence": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 175.0,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:bamboo_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 175.0,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:bamboo_hanging_sign": {
     "C": 1071.0,
@@ -499,9 +499,9 @@
     "C": 4589.0,
     "S": 459.0,
     "T": 229.0,
-    "m": 390.0,
-    "maxArchSpan": 9,
-    "maxCantilever": 1
+    "m": 50.0,
+    "maxArchSpan": 27,
+    "maxCantilever": 3
   },
   "minecraft:big_dripleaf": {
     "C": 0.0,
@@ -531,25 +531,25 @@
     "C": 6692.0,
     "S": 4780.0,
     "T": 2868.0,
-    "m": 120.0,
-    "maxArchSpan": 21,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 23,
+    "maxCantilever": 9
   },
   "minecraft:birch_fence": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 160.0,
-    "maxArchSpan": 21,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:birch_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 160.0,
-    "maxArchSpan": 21,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:birch_hanging_sign": {
     "C": 1071.0,
@@ -747,9 +747,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:black_terracotta": {
     "C": 15296.0,
@@ -931,9 +931,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:blue_terracotta": {
     "C": 15296.0,
@@ -995,9 +995,9 @@
     "C": 5099.0,
     "S": 510.0,
     "T": 204.0,
-    "m": 1500.0,
-    "maxArchSpan": 5,
-    "maxCantilever": 0
+    "m": 100.0,
+    "maxArchSpan": 20,
+    "maxCantilever": 2
   },
   "minecraft:brain_coral_block": {
     "C": 5099.0,
@@ -1027,9 +1027,9 @@
     "C": 30591.0,
     "S": 3059.0,
     "T": 1530.0,
-    "m": 2600.0,
-    "maxArchSpan": 9,
-    "maxCantilever": 1
+    "m": 100.0,
+    "maxArchSpan": 49,
+    "maxCantilever": 7
   },
   "minecraft:brick_slab": {
     "C": 7648.0,
@@ -1163,9 +1163,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:brown_terracotta": {
     "C": 15296.0,
@@ -1219,9 +1219,9 @@
     "C": 5099.0,
     "S": 510.0,
     "T": 204.0,
-    "m": 1500.0,
-    "maxArchSpan": 5,
-    "maxCantilever": 0
+    "m": 100.0,
+    "maxArchSpan": 20,
+    "maxCantilever": 2
   },
   "minecraft:bubble_coral_block": {
     "C": 5099.0,
@@ -1387,9 +1387,9 @@
     "C": 7648.0,
     "S": 7648.0,
     "T": 7648.0,
-    "m": 236.1,
-    "maxArchSpan": 16,
-    "maxCantilever": 7
+    "m": 60.0,
+    "maxArchSpan": 31,
+    "maxCantilever": 15
   },
   "minecraft:chain_command_block": {
     "C": 30591.0,
@@ -1411,25 +1411,25 @@
     "C": 6692.0,
     "S": 4780.0,
     "T": 2868.0,
-    "m": 108.8,
-    "maxArchSpan": 22,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 23,
+    "maxCantilever": 9
   },
   "minecraft:cherry_fence": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 145.0,
-    "maxArchSpan": 22,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:cherry_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 145.0,
-    "maxArchSpan": 22,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:cherry_hanging_sign": {
     "C": 1071.0,
@@ -1899,9 +1899,9 @@
     "C": 1530.0,
     "S": 153.0,
     "T": 76.0,
-    "m": 130.0,
-    "maxArchSpan": 9,
-    "maxCantilever": 1
+    "m": 16.3,
+    "maxArchSpan": 27,
+    "maxCantilever": 3
   },
   "minecraft:copper_bars": {
     "C": 12237.0,
@@ -1947,9 +1947,9 @@
     "C": 28679.0,
     "S": 28679.0,
     "T": 28679.0,
-    "m": 1680.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 100.0,
+    "maxArchSpan": 47,
+    "maxCantilever": 23
   },
   "minecraft:copper_golem_statue": {
     "C": 91774.0,
@@ -1971,9 +1971,9 @@
     "C": 7648.0,
     "S": 7648.0,
     "T": 7648.0,
-    "m": 448.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 5.0,
+    "maxArchSpan": 110,
+    "maxCantilever": 54
   },
   "minecraft:copper_ore": {
     "C": 40788.0,
@@ -2083,17 +2083,17 @@
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:creeper_wall_head": {
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:crimson_button": {
     "C": 357.0,
@@ -2115,17 +2115,17 @@
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 125.0,
-    "maxArchSpan": 23,
-    "maxCantilever": 9
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:crimson_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 125.0,
-    "maxArchSpan": 23,
-    "maxCantilever": 9
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:crimson_fungus": {
     "C": 0.0,
@@ -2395,9 +2395,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:cyan_terracotta": {
     "C": 15296.0,
@@ -2467,25 +2467,25 @@
     "C": 6692.0,
     "S": 4780.0,
     "T": 2868.0,
-    "m": 144.4,
-    "maxArchSpan": 19,
-    "maxCantilever": 7
+    "m": 100.0,
+    "maxArchSpan": 23,
+    "maxCantilever": 9
   },
   "minecraft:dark_oak_fence": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 192.5,
-    "maxArchSpan": 19,
-    "maxCantilever": 7
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:dark_oak_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 192.5,
-    "maxArchSpan": 19,
-    "maxCantilever": 7
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:dark_oak_hanging_sign": {
     "C": 1071.0,
@@ -2635,9 +2635,9 @@
     "C": 5099.0,
     "S": 510.0,
     "T": 204.0,
-    "m": 1500.0,
-    "maxArchSpan": 5,
-    "maxCantilever": 0
+    "m": 100.0,
+    "maxArchSpan": 20,
+    "maxCantilever": 2
   },
   "minecraft:dead_brain_coral_block": {
     "C": 5099.0,
@@ -2667,9 +2667,9 @@
     "C": 5099.0,
     "S": 510.0,
     "T": 204.0,
-    "m": 1500.0,
-    "maxArchSpan": 5,
-    "maxCantilever": 0
+    "m": 100.0,
+    "maxArchSpan": 20,
+    "maxCantilever": 2
   },
   "minecraft:dead_bubble_coral_block": {
     "C": 5099.0,
@@ -2707,9 +2707,9 @@
     "C": 5099.0,
     "S": 510.0,
     "T": 204.0,
-    "m": 1500.0,
-    "maxArchSpan": 5,
-    "maxCantilever": 0
+    "m": 100.0,
+    "maxArchSpan": 20,
+    "maxCantilever": 2
   },
   "minecraft:dead_fire_coral_block": {
     "C": 5099.0,
@@ -2739,9 +2739,9 @@
     "C": 5099.0,
     "S": 510.0,
     "T": 204.0,
-    "m": 1500.0,
-    "maxArchSpan": 5,
-    "maxCantilever": 0
+    "m": 100.0,
+    "maxArchSpan": 20,
+    "maxCantilever": 2
   },
   "minecraft:dead_horn_coral_block": {
     "C": 5099.0,
@@ -2771,9 +2771,9 @@
     "C": 5099.0,
     "S": 510.0,
     "T": 204.0,
-    "m": 1500.0,
-    "maxArchSpan": 5,
-    "maxCantilever": 0
+    "m": 100.0,
+    "maxArchSpan": 20,
+    "maxCantilever": 2
   },
   "minecraft:dead_tube_coral_block": {
     "C": 5099.0,
@@ -2803,8 +2803,8 @@
     "C": 3059.0,
     "S": 306.0,
     "T": 153.0,
-    "m": 260.0,
-    "maxArchSpan": 9,
+    "m": 130.0,
+    "maxArchSpan": 13,
     "maxCantilever": 1
   },
   "minecraft:deepslate": {
@@ -2947,9 +2947,9 @@
     "C": 5099.0,
     "S": 5099.0,
     "T": 5099.0,
-    "m": 157.4,
-    "maxArchSpan": 16,
-    "maxCantilever": 7
+    "m": 60.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 12
   },
   "minecraft:diamond_block": {
     "C": 61183.0,
@@ -3027,25 +3027,25 @@
     "C": 50986.0,
     "S": 5099.0,
     "T": 2549.0,
-    "m": 2550.0,
-    "maxArchSpan": 12,
+    "m": 1912.5,
+    "maxArchSpan": 14,
     "maxCantilever": 1
   },
   "minecraft:dragon_head": {
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:dragon_wall_head": {
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:dried_ghast": {
     "C": 1020.0,
@@ -3099,8 +3099,8 @@
     "C": 30591.0,
     "S": 3059.0,
     "T": 1530.0,
-    "m": 2600.0,
-    "maxArchSpan": 9,
+    "m": 1950.0,
+    "maxArchSpan": 11,
     "maxCantilever": 1
   },
   "minecraft:end_gateway": {
@@ -3235,9 +3235,9 @@
     "C": 28679.0,
     "S": 28679.0,
     "T": 28679.0,
-    "m": 1680.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 100.0,
+    "maxArchSpan": 47,
+    "maxCantilever": 23
   },
   "minecraft:exposed_copper_golem_statue": {
     "C": 91774.0,
@@ -3259,9 +3259,9 @@
     "C": 7648.0,
     "S": 7648.0,
     "T": 7648.0,
-    "m": 448.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 5.0,
+    "maxArchSpan": 110,
+    "maxCantilever": 54
   },
   "minecraft:exposed_copper_trapdoor": {
     "C": 28679.0,
@@ -3331,9 +3331,9 @@
     "C": 5099.0,
     "S": 510.0,
     "T": 204.0,
-    "m": 1500.0,
-    "maxArchSpan": 5,
-    "maxCantilever": 0
+    "m": 100.0,
+    "maxArchSpan": 20,
+    "maxCantilever": 2
   },
   "minecraft:fire_coral_block": {
     "C": 5099.0,
@@ -3379,9 +3379,9 @@
     "C": 612.0,
     "S": 61.0,
     "T": 31.0,
-    "m": 52.0,
-    "maxArchSpan": 9,
-    "maxCantilever": 1
+    "m": 3.0,
+    "maxArchSpan": 40,
+    "maxCantilever": 5
   },
   "minecraft:flowering_azalea": {
     "C": 0.0,
@@ -3443,9 +3443,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:glow_lichen": {
     "C": 0.0,
@@ -3619,9 +3619,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:gray_terracotta": {
     "C": 15296.0,
@@ -3747,9 +3747,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:green_terracotta": {
     "C": 15296.0,
@@ -3827,9 +3827,9 @@
     "C": 918.0,
     "S": 612.0,
     "T": 612.0,
-    "m": 579.0,
-    "maxArchSpan": 3,
-    "maxCantilever": 1
+    "m": 100.0,
+    "maxArchSpan": 8,
+    "maxCantilever": 3
   },
   "minecraft:honey_block": {
     "C": 1020.0,
@@ -3859,9 +3859,9 @@
     "C": 5099.0,
     "S": 510.0,
     "T": 204.0,
-    "m": 1500.0,
-    "maxArchSpan": 5,
-    "maxCantilever": 0
+    "m": 100.0,
+    "maxArchSpan": 20,
+    "maxCantilever": 2
   },
   "minecraft:horn_coral_block": {
     "C": 5099.0,
@@ -3955,9 +3955,9 @@
     "C": 20394.0,
     "S": 20394.0,
     "T": 20394.0,
-    "m": 629.6,
-    "maxArchSpan": 16,
-    "maxCantilever": 7
+    "m": 50.0,
+    "maxArchSpan": 57,
+    "maxCantilever": 28
   },
   "minecraft:iron_block": {
     "C": 254928.0,
@@ -3979,9 +3979,9 @@
     "C": 47799.0,
     "S": 47799.0,
     "T": 47799.0,
-    "m": 1475.6,
-    "maxArchSpan": 16,
-    "maxCantilever": 7
+    "m": 100.0,
+    "maxArchSpan": 61,
+    "maxCantilever": 30
   },
   "minecraft:iron_ore": {
     "C": 40788.0,
@@ -4035,25 +4035,25 @@
     "C": 6692.0,
     "S": 4780.0,
     "T": 2868.0,
-    "m": 131.2,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 23,
+    "maxCantilever": 9
   },
   "minecraft:jungle_fence": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 175.0,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:jungle_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 175.0,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:jungle_hanging_sign": {
     "C": 1071.0,
@@ -4195,9 +4195,9 @@
     "C": 12746.0,
     "S": 12746.0,
     "T": 12746.0,
-    "m": 393.5,
-    "maxArchSpan": 16,
-    "maxCantilever": 7
+    "m": 5.0,
+    "maxArchSpan": 142,
+    "maxCantilever": 70
   },
   "minecraft:lapis_block": {
     "C": 61183.0,
@@ -4363,9 +4363,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:light_blue_terracotta": {
     "C": 15296.0,
@@ -4491,9 +4491,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:light_gray_terracotta": {
     "C": 15296.0,
@@ -4539,9 +4539,9 @@
     "C": 918.0,
     "S": 612.0,
     "T": 612.0,
-    "m": 579.0,
-    "maxArchSpan": 3,
-    "maxCantilever": 1
+    "m": 100.0,
+    "maxArchSpan": 8,
+    "maxCantilever": 3
   },
   "minecraft:lightning_rod": {
     "C": 7648.0,
@@ -4659,9 +4659,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:lime_terracotta": {
     "C": 15296.0,
@@ -4803,9 +4803,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:magenta_terracotta": {
     "C": 15296.0,
@@ -4867,25 +4867,25 @@
     "C": 6692.0,
     "S": 4780.0,
     "T": 2868.0,
-    "m": 150.0,
-    "maxArchSpan": 18,
-    "maxCantilever": 7
+    "m": 100.0,
+    "maxArchSpan": 23,
+    "maxCantilever": 9
   },
   "minecraft:mangrove_fence": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 200.0,
-    "maxArchSpan": 18,
-    "maxCantilever": 7
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:mangrove_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 200.0,
-    "maxArchSpan": 18,
-    "maxCantilever": 7
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:mangrove_hanging_sign": {
     "C": 1071.0,
@@ -5187,9 +5187,9 @@
     "C": 3824.0,
     "S": 255.0,
     "T": 127.0,
-    "m": 500.0,
-    "maxArchSpan": 7,
-    "maxCantilever": 0
+    "m": 100.0,
+    "maxArchSpan": 17,
+    "maxCantilever": 1
   },
   "minecraft:nether_brick_slab": {
     "C": 7648.0,
@@ -5307,25 +5307,25 @@
     "C": 6692.0,
     "S": 4780.0,
     "T": 2868.0,
-    "m": 131.2,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 23,
+    "maxCantilever": 9
   },
   "minecraft:oak_fence": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 175.0,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:oak_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 175.0,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:oak_hanging_sign": {
     "C": 1071.0,
@@ -5563,9 +5563,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:orange_terracotta": {
     "C": 15296.0,
@@ -5675,9 +5675,9 @@
     "C": 28679.0,
     "S": 28679.0,
     "T": 28679.0,
-    "m": 1680.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 100.0,
+    "maxArchSpan": 47,
+    "maxCantilever": 23
   },
   "minecraft:oxidized_copper_golem_statue": {
     "C": 91774.0,
@@ -5699,9 +5699,9 @@
     "C": 7648.0,
     "S": 7648.0,
     "T": 7648.0,
-    "m": 448.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 5.0,
+    "maxArchSpan": 110,
+    "maxCantilever": 54
   },
   "minecraft:oxidized_copper_trapdoor": {
     "C": 28679.0,
@@ -5795,25 +5795,25 @@
     "C": 6692.0,
     "S": 4780.0,
     "T": 2868.0,
-    "m": 121.9,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 23,
+    "maxCantilever": 9
   },
   "minecraft:pale_oak_fence": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 162.5,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:pale_oak_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 162.5,
-    "maxArchSpan": 20,
-    "maxCantilever": 8
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:pale_oak_hanging_sign": {
     "C": 1071.0,
@@ -5955,17 +5955,17 @@
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:piglin_wall_head": {
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:pink_banner": {
     "C": 10.0,
@@ -6059,9 +6059,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:pink_terracotta": {
     "C": 15296.0,
@@ -6147,17 +6147,17 @@
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:player_wall_head": {
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:podzol": {
     "C": 510.0,
@@ -6259,9 +6259,9 @@
     "C": 3365.0,
     "S": 337.0,
     "T": 168.0,
-    "m": 159.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 1
+    "m": 100.0,
+    "maxArchSpan": 16,
+    "maxCantilever": 2
   },
   "minecraft:polished_blackstone_slab": {
     "C": 30591.0,
@@ -6483,7 +6483,7 @@
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 105.0,
+    "m": 100.0,
     "maxArchSpan": 26,
     "maxCantilever": 10
   },
@@ -6491,7 +6491,7 @@
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 105.0,
+    "m": 100.0,
     "maxArchSpan": 26,
     "maxCantilever": 10
   },
@@ -6955,9 +6955,9 @@
     "C": 5099.0,
     "S": 5099.0,
     "T": 5099.0,
-    "m": 157.4,
-    "maxArchSpan": 16,
-    "maxCantilever": 7
+    "m": 60.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 12
   },
   "minecraft:prismarine": {
     "C": 50986.0,
@@ -7115,9 +7115,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:purple_terracotta": {
     "C": 15296.0,
@@ -7235,9 +7235,9 @@
     "C": 5099.0,
     "S": 5099.0,
     "T": 5099.0,
-    "m": 157.4,
-    "maxArchSpan": 16,
-    "maxCantilever": 7
+    "m": 60.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 12
   },
   "minecraft:raw_copper_block": {
     "C": 254928.0,
@@ -7451,9 +7451,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:red_terracotta": {
     "C": 15296.0,
@@ -7803,17 +7803,17 @@
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:skeleton_wall_skull": {
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:slime_block": {
     "C": 1020.0,
@@ -7963,8 +7963,8 @@
     "C": 32.0,
     "S": 3.0,
     "T": 1.0,
-    "m": 25.0,
-    "maxArchSpan": 3,
+    "m": 3.1,
+    "maxArchSpan": 9,
     "maxCantilever": 0
   },
   "minecraft:snow_block": {
@@ -7995,9 +7995,9 @@
     "C": 12746.0,
     "S": 12746.0,
     "T": 12746.0,
-    "m": 393.5,
-    "maxArchSpan": 16,
-    "maxCantilever": 7
+    "m": 5.0,
+    "maxArchSpan": 142,
+    "maxCantilever": 70
   },
   "minecraft:soul_sand": {
     "C": 510.0,
@@ -8035,9 +8035,9 @@
     "C": 30591.0,
     "S": 3059.0,
     "T": 1530.0,
-    "m": 7870.0,
-    "maxArchSpan": 5,
-    "maxCantilever": 0
+    "m": 2361.0,
+    "maxArchSpan": 10,
+    "maxCantilever": 1
   },
   "minecraft:sponge": {
     "C": 1020.0,
@@ -8075,16 +8075,16 @@
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 112.5,
-    "maxArchSpan": 25,
+    "m": 100.0,
+    "maxArchSpan": 26,
     "maxCantilever": 10
   },
   "minecraft:spruce_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 112.5,
-    "maxArchSpan": 25,
+    "m": 100.0,
+    "maxArchSpan": 26,
     "maxCantilever": 10
   },
   "minecraft:spruce_hanging_sign": {
@@ -8259,8 +8259,8 @@
     "C": 2804.0,
     "S": 280.0,
     "T": 140.0,
-    "m": 143.0,
-    "maxArchSpan": 12,
+    "m": 100.0,
+    "maxArchSpan": 14,
     "maxCantilever": 1
   },
   "minecraft:stone_slab": {
@@ -8755,9 +8755,9 @@
     "C": 5099.0,
     "S": 510.0,
     "T": 204.0,
-    "m": 1500.0,
-    "maxArchSpan": 5,
-    "maxCantilever": 0
+    "m": 100.0,
+    "maxArchSpan": 20,
+    "maxCantilever": 2
   },
   "minecraft:tube_coral_block": {
     "C": 5099.0,
@@ -8931,17 +8931,17 @@
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 125.0,
-    "maxArchSpan": 23,
-    "maxCantilever": 9
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:warped_fence_gate": {
     "C": 8922.0,
     "S": 6373.0,
     "T": 3824.0,
-    "m": 125.0,
-    "maxArchSpan": 23,
-    "maxCantilever": 9
+    "m": 100.0,
+    "maxArchSpan": 26,
+    "maxCantilever": 10
   },
   "minecraft:warped_fungus": {
     "C": 0.0,
@@ -9139,9 +9139,9 @@
     "C": 28679.0,
     "S": 28679.0,
     "T": 28679.0,
-    "m": 1680.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 100.0,
+    "maxArchSpan": 47,
+    "maxCantilever": 23
   },
   "minecraft:waxed_copper_golem_statue": {
     "C": 91774.0,
@@ -9163,9 +9163,9 @@
     "C": 7648.0,
     "S": 7648.0,
     "T": 7648.0,
-    "m": 448.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 5.0,
+    "maxArchSpan": 110,
+    "maxCantilever": 54
   },
   "minecraft:waxed_copper_trapdoor": {
     "C": 28679.0,
@@ -9251,9 +9251,9 @@
     "C": 28679.0,
     "S": 28679.0,
     "T": 28679.0,
-    "m": 1680.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 100.0,
+    "maxArchSpan": 47,
+    "maxCantilever": 23
   },
   "minecraft:waxed_exposed_copper_golem_statue": {
     "C": 91774.0,
@@ -9275,9 +9275,9 @@
     "C": 7648.0,
     "S": 7648.0,
     "T": 7648.0,
-    "m": 448.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 5.0,
+    "maxArchSpan": 110,
+    "maxCantilever": 54
   },
   "minecraft:waxed_exposed_copper_trapdoor": {
     "C": 28679.0,
@@ -9379,9 +9379,9 @@
     "C": 28679.0,
     "S": 28679.0,
     "T": 28679.0,
-    "m": 1680.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 100.0,
+    "maxArchSpan": 47,
+    "maxCantilever": 23
   },
   "minecraft:waxed_oxidized_copper_golem_statue": {
     "C": 91774.0,
@@ -9403,9 +9403,9 @@
     "C": 7648.0,
     "S": 7648.0,
     "T": 7648.0,
-    "m": 448.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 5.0,
+    "maxArchSpan": 110,
+    "maxCantilever": 54
   },
   "minecraft:waxed_oxidized_copper_trapdoor": {
     "C": 28679.0,
@@ -9499,9 +9499,9 @@
     "C": 28679.0,
     "S": 28679.0,
     "T": 28679.0,
-    "m": 1680.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 100.0,
+    "maxArchSpan": 47,
+    "maxCantilever": 23
   },
   "minecraft:waxed_weathered_copper_golem_statue": {
     "C": 91774.0,
@@ -9523,9 +9523,9 @@
     "C": 7648.0,
     "S": 7648.0,
     "T": 7648.0,
-    "m": 448.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 5.0,
+    "maxArchSpan": 110,
+    "maxCantilever": 54
   },
   "minecraft:waxed_weathered_copper_trapdoor": {
     "C": 28679.0,
@@ -9619,9 +9619,9 @@
     "C": 28679.0,
     "S": 28679.0,
     "T": 28679.0,
-    "m": 1680.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 100.0,
+    "maxArchSpan": 47,
+    "maxCantilever": 23
   },
   "minecraft:weathered_copper_golem_statue": {
     "C": 91774.0,
@@ -9643,9 +9643,9 @@
     "C": 7648.0,
     "S": 7648.0,
     "T": 7648.0,
-    "m": 448.0,
-    "maxArchSpan": 11,
-    "maxCantilever": 5
+    "m": 5.0,
+    "maxArchSpan": 110,
+    "maxCantilever": 54
   },
   "minecraft:weathered_copper_trapdoor": {
     "C": 28679.0,
@@ -9803,9 +9803,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:white_terracotta": {
     "C": 15296.0,
@@ -9875,17 +9875,17 @@
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:wither_skeleton_wall_skull": {
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:yellow_banner": {
     "C": 10.0,
@@ -9979,9 +9979,9 @@
     "C": 6373.0,
     "S": 127.0,
     "T": 64.0,
-    "m": 312.5,
-    "maxArchSpan": 12,
-    "maxCantilever": 0
+    "m": 40.0,
+    "maxArchSpan": 35,
+    "maxCantilever": 2
   },
   "minecraft:yellow_terracotta": {
     "C": 15296.0,
@@ -10027,16 +10027,16 @@
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   },
   "minecraft:zombie_wall_head": {
     "C": 41.0,
     "S": 12.0,
     "T": 4.0,
-    "m": 76.0,
-    "maxArchSpan": 2,
-    "maxCantilever": 0
+    "m": 8.0,
+    "maxArchSpan": 6,
+    "maxCantilever": 1
   }
 }

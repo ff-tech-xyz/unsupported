@@ -12,9 +12,11 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Set;
 
 public final class BlockStrengths {
     private static final String RESOURCE_PATH = "/data/unsupported/block_strengths.json";
@@ -23,10 +25,14 @@ public final class BlockStrengths {
     private static final Type PROFILE_MAP_TYPE = new TypeToken<Map<String, StrengthProfile>>() {}.getType();
     private static Map<String, StrengthProfile> profiles = Collections.emptyMap();
     private static StrengthProfile stoneFallback;
+    private static Logger logger;
+    private static final Set<String> warnedUnknownIds = Collections.synchronizedSet(new HashSet<>());
 
     private BlockStrengths() {}
 
     public static void load(Logger logger) {
+        BlockStrengths.logger = logger;
+        warnedUnknownIds.clear();
         try (InputStream stream = BlockStrengths.class.getResourceAsStream(RESOURCE_PATH)) {
             if (stream == null) {
                 logger.error("Unsupported could not find {}", RESOURCE_PATH);
@@ -55,6 +61,9 @@ public final class BlockStrengths {
         StrengthProfile exact = profiles.get(id.toString());
         if (exact != null) {
             return Optional.of(exact);
+        }
+        if (stoneFallback != null && logger != null && warnedUnknownIds.add(id.toString())) {
+            logger.warn("Unsupported has no strength profile for {}; using minecraft:stone fallback", id);
         }
         return Optional.ofNullable(stoneFallback);
     }
