@@ -37,12 +37,18 @@ public final class SupportScannerTest {
         externalDirtFailsWhileStoneSupports();
         topOriginReachesRealDirtAndStoneSupport();
         middleOriginReachesRealDirtAndStoneSupport();
+        mixedMaterialColumnIsOriginIndependent();
+        sameMaterialTerrainUsesGeometricSupportFrontier();
+        wideMixedTreeIsCollectedThroughWorldScanner();
         attachmentsShareBudgetAndCollapseTogether();
+        knownStandingAndFloorAttachmentsResolveThroughScanner();
+        horizontalChainHasNegativeEndpointOwner();
+        verticalChainLoadsOnlyFromAbove();
         attachmentRadiusIsMeasuredFromScanOrigin();
         unknownAttachmentIsNotClaimedByEitherStructure();
         deterministicCollapseOutput();
         staleAndRejectedAttemptsConsumeBudgets();
-        System.out.println("SupportScannerTest: 11 passed");
+        System.out.println("SupportScannerTest: 17 passed");
     }
 
     private static void terrainBoundaryDoesNotFlood() {
@@ -132,6 +138,64 @@ public final class SupportScannerTest {
         assertEquals(List.of(), stoneResult.failedPositions());
     }
 
+    private static void mixedMaterialColumnIsOriginIndependent() {
+        BlockPos base = new BlockPos(0, 1, 0);
+        FakeWorld world = new FakeWorld();
+        world.put(base.below(), Blocks.DIRT.defaultBlockState());
+        for (int y = 0; y < 15; y++) world.put(base.above(y), Blocks.COBBLESTONE.defaultBlockState());
+        for (int y = 15; y < 30; y++) world.put(base.above(y), Blocks.OAK_PLANKS.defaultBlockState());
+
+        SupportScanner scanner = scanner(256, 64);
+        List<BlockPos> expected = scanner.scan(world, base).failedPositions();
+        for (BlockPos origin : List.of(base, base.above(14), base.above(29))) {
+            SupportScanResult result = scanner.scan(world, origin);
+            assertEquals(SupportStatus.FAILED, result.status());
+            assertEquals(30, result.scannedCount());
+            assertEquals(expected, result.failedPositions());
+        }
+    }
+
+    private static void sameMaterialTerrainUsesGeometricSupportFrontier() {
+        BlockPos base = new BlockPos(0, 1, 0);
+        FakeWorld world = new FakeWorld();
+        for (int x = -20; x <= 20; x++) world.put(new BlockPos(x, 0, 0), Blocks.COBBLESTONE.defaultBlockState());
+        for (int y = 0; y < 30; y++) world.put(base.above(y), Blocks.COBBLESTONE.defaultBlockState());
+
+        SupportScanResult result = scanner(256, 64).scan(world, base.above(29));
+
+        assertEquals(SupportStatus.FAILED, result.status());
+        assertEquals(30, result.scannedCount());
+        assertEquals(30, result.failedPositions().size());
+    }
+
+    private static void wideMixedTreeIsCollectedThroughWorldScanner() {
+        BlockPos trunk = new BlockPos(0, 1, 0);
+        FakeWorld world = new FakeWorld();
+        world.put(trunk.below(), Blocks.STONE.defaultBlockState());
+        for (int y = 0; y < 12; y++) world.put(trunk.above(y),
+            y < 6 ? Blocks.COBBLESTONE.defaultBlockState() : Blocks.OAK_PLANKS.defaultBlockState());
+        BlockPos crown = trunk.above(11);
+        int expectedCount = 12;
+        for (int x = -8; x <= 8; x++) {
+            for (int z = -8; z <= 8; z++) {
+                if (Math.abs(x) + Math.abs(z) > 8 || (x == 0 && z == 0)) continue;
+                world.put(crown.offset(x, 0, z), ((x + z) & 1) == 0
+                    ? Blocks.OAK_PLANKS.defaultBlockState() : Blocks.COBBLESTONE.defaultBlockState());
+                expectedCount++;
+            }
+        }
+
+        SupportScanner scanner = scanner(512, 64);
+        SupportScanResult expected = scanner.scan(world, trunk);
+        assertEquals(expectedCount, expected.scannedCount());
+        for (BlockPos origin : List.of(trunk, crown, crown.east(8))) {
+            SupportScanResult result = scanner.scan(world, origin);
+            assertEquals(expected.status(), result.status());
+            assertEquals(expectedCount, result.scannedCount());
+            assertEquals(expected.failedPositions(), result.failedPositions());
+        }
+    }
+
     private static void attachmentsShareBudgetAndCollapseTogether() {
         BlockPos origin = new BlockPos(0, 1, 0);
         FakeWorld world = new FakeWorld();
@@ -154,6 +218,73 @@ public final class SupportScannerTest {
         assertEquals(SupportStatus.LIMIT_REACHED, capped.status());
         assertEquals(3, capped.scannedCount());
         assertEquals(List.of(), capped.failedPositions());
+    }
+
+    private static void knownStandingAndFloorAttachmentsResolveThroughScanner() {
+        List<BlockState> decorations = List.of(
+            Blocks.BANNER.white().defaultBlockState(),
+            Blocks.OAK_SIGN.defaultBlockState(),
+            Blocks.PLAYER_HEAD.defaultBlockState(),
+            Blocks.LANTERN.defaultBlockState());
+        for (int i = 0; i < decorations.size(); i++) {
+            BlockPos base = new BlockPos(i * 4, 1, 0);
+            BlockPos host = base.above(9);
+            BlockPos decoration = host.above();
+            FakeWorld world = new FakeWorld();
+            world.put(base.below(), Blocks.DIRT.defaultBlockState());
+            for (int y = 0; y < 10; y++) world.put(base.above(y), Blocks.COBBLESTONE.defaultBlockState());
+            world.put(decoration, decorations.get(i));
+
+            assertEquals(List.of(host), AttachmentResolver.hosts(decoration, decorations.get(i)));
+            SupportScanResult result = scanner(32, 32).scan(world, decoration);
+            assertEquals(SupportStatus.FAILED, result.status());
+            assertEquals(11, result.scannedCount());
+            assertEquals(11, result.failedPositions().size());
+            assertEquals(true, result.failedPositions().contains(decoration));
+        }
+    }
+
+    private static void horizontalChainHasNegativeEndpointOwner() {
+        BlockPos leftBase = new BlockPos(0, 1, 0);
+        BlockPos rightBase = leftBase.east(2);
+        BlockPos leftHost = leftBase.above(9);
+        BlockPos rightHost = rightBase.above(9);
+        BlockPos chain = leftHost.east();
+        FakeWorld world = new FakeWorld();
+        world.put(leftBase.below(), Blocks.DIRT.defaultBlockState());
+        world.put(rightBase.below(), Blocks.DIRT.defaultBlockState());
+        for (int y = 0; y < 10; y++) {
+            world.put(leftBase.above(y), Blocks.COBBLESTONE.defaultBlockState());
+            world.put(rightBase.above(y), Blocks.COBBLESTONE.defaultBlockState());
+        }
+        world.put(chain, Blocks.IRON_CHAIN.defaultBlockState().setValue(ChainBlock.AXIS, Direction.Axis.X));
+
+        SupportScanner scanner = scanner(64, 32);
+        SupportScanResult left = scanner.scan(world, leftHost);
+        SupportScanResult right = scanner.scan(world, rightHost);
+        assertEquals(11, left.scannedCount());
+        assertEquals(true, left.failedPositions().contains(chain));
+        assertEquals(10, right.scannedCount());
+        assertEquals(false, right.failedPositions().contains(chain));
+    }
+
+    private static void verticalChainLoadsOnlyFromAbove() {
+        BlockPos bottom = new BlockPos(0, 1, 0);
+        BlockPos chain = bottom.above();
+        BlockPos top = chain.above();
+        FakeWorld world = new FakeWorld();
+        world.put(bottom.below(), Blocks.STONE.defaultBlockState());
+        world.put(bottom, Blocks.COBBLESTONE.defaultBlockState());
+        world.put(chain, Blocks.IRON_CHAIN.defaultBlockState().setValue(ChainBlock.AXIS, Direction.Axis.Y));
+        world.put(top, Blocks.COBBLESTONE.defaultBlockState());
+
+        SupportScanner scanner = scanner(16, 16);
+        SupportScanResult topResult = scanner.scan(world, top);
+        SupportScanResult bottomResult = scanner.scan(world, bottom);
+        assertEquals(2, topResult.scannedCount());
+        assertEquals(true, topResult.failedPositions().contains(chain));
+        assertEquals(1, bottomResult.scannedCount());
+        assertEquals(false, bottomResult.failedPositions().contains(chain));
     }
 
     private static void attachmentRadiusIsMeasuredFromScanOrigin() {

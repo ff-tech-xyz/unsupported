@@ -30,14 +30,22 @@ public final class AttachmentResolver {
         if (id.endsWith("_chain")) {
             String axisName = values.get("axis");
             Direction.Axis axis = axisName == null ? Direction.Axis.Y : Direction.Axis.byName(axisName);
-            if (axis == Direction.Axis.Y) return List.of(pos.above(), pos.below());
-            return List.of(pos.relative(Direction.get(Direction.AxisDirection.POSITIVE, axis)), pos.relative(Direction.get(Direction.AxisDirection.NEGATIVE, axis)));
+            // Chains have one owner: vertical links transfer load upward; horizontal runs transfer
+            // toward the negative-coordinate endpoint (west for X, north for Z). Repeating that
+            // rule across links gives the whole run one deterministic endpoint owner.
+            if (axis == Direction.Axis.Y) return List.of(pos.above());
+            return List.of(pos.relative(Direction.get(Direction.AxisDirection.NEGATIVE, axis)));
         }
         if ("wall".equals(face) && direction != null) return List.of(pos.relative(direction.getOpposite()));
         if ((id.contains("wall_") || id.contains("ladder") || id.contains("tripwire_hook")) && direction != null) return List.of(pos.relative(direction.getOpposite()));
         if ("ceiling".equals(face) || "true".equals(values.get("hanging")) || id.contains("hanging_sign")) return List.of(pos.above());
         if ("floor".equals(face)) return List.of(pos.below());
         if (direction != null && (id.contains("button") || id.contains("lever"))) return List.of(pos.relative(direction.getOpposite()));
+        // Known freestanding/floor-mounted attachment families have no directional face property.
+        if (id.endsWith("_banner") || id.endsWith("_sign") || id.endsWith("_head")
+            || id.endsWith("_skull") || id.equals("lantern") || id.endsWith("_lantern")) {
+            return List.of(pos.below());
+        }
         if (id.equals("sea_pickle") || id.equals("turtle_egg") || id.equals("flower_pot")
             || id.equals("torch") || id.endsWith("_candle") || id.equals("candle")
             || id.endsWith("_pressure_plate") || id.endsWith("_rail") || id.equals("rail")

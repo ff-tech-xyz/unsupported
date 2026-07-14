@@ -49,10 +49,11 @@ public final class SupportLogicTest {
         actualStatesDriveMassAndAttachmentDirection();
         scannerBuildsDownParentBeforeSideParent();
         sideArmFollowsSelectedHorizontalParentPath();
+        sideParentMustBeRecordedPathPredecessor();
         scannerGroundingFixtureUsesSelectedHorizontalParentArm();
         downGroundingResetsArmAndOnlyHorizontalStepsIncreaseIt();
         benchmarkBoundedLoadTree();
-        System.out.println("SupportLogicTest: 12 passed");
+        System.out.println("SupportLogicTest: 13 passed");
     }
 
     private static void externalSupportCapacityIsChecked() {
@@ -86,8 +87,10 @@ public final class SupportLogicTest {
     private static void actualStatesDriveMassAndAttachmentDirection() {
         assertClose(400, StateMassModifiers.apply(100, Blocks.CANDLE.defaultBlockState().setValue(CandleBlock.CANDLES, 4)));
         BlockPos chain = new BlockPos(10, 20, 30);
-        assertEquals(List.of(chain.east(), chain.west()), AttachmentResolver.hosts(chain,
+        assertEquals(List.of(chain.west()), AttachmentResolver.hosts(chain,
             Blocks.IRON_CHAIN.defaultBlockState().setValue(ChainBlock.AXIS, Direction.Axis.X)));
+        assertEquals(List.of(chain.above()), AttachmentResolver.hosts(chain,
+            Blocks.IRON_CHAIN.defaultBlockState().setValue(ChainBlock.AXIS, Direction.Axis.Y)));
         BlockPos bell = new BlockPos(0, 5, 0);
         assertEquals(List.of(bell.above()), AttachmentResolver.hosts(bell,
             Blocks.BELL.defaultBlockState().setValue(BellBlock.ATTACHMENT, BellAttachType.CEILING)));
@@ -145,6 +148,32 @@ public final class SupportLogicTest {
         SupportScanner.Parent parent = SupportScanner.chooseParent(nodes, paths, child);
 
         assertEquals(selectedSide, parent.pos());
+        assertEquals(SupportEdgeType.SIDE, parent.edge());
+        assertEquals(2, parent.momentArm());
+    }
+
+    private static void sideParentMustBeRecordedPathPredecessor() {
+        StrengthProfile weak = new StrengthProfile();
+        weak.C = weak.T = 10_000;
+        weak.S = 1;
+        StrengthProfile strong = new StrengthProfile();
+        strong.C = strong.S = strong.T = 10_000;
+        BlockPos child = new BlockPos(0, 10, 0);
+        BlockPos weakWest = child.west();
+        BlockPos strongEast = child.east();
+        BlockPos ground = new BlockPos(-2, 0, 0);
+        Map<BlockPos, SupportScanner.NodeData> nodes = new LinkedHashMap<>();
+        nodes.put(child, new SupportScanner.NodeData(strong, 1, List.of()));
+        nodes.put(weakWest, new SupportScanner.NodeData(weak, 1, List.of()));
+        nodes.put(strongEast, new SupportScanner.NodeData(strong, 1, List.of()));
+        Map<BlockPos, SupportScanner.SupportPath> paths = Map.of(
+            child, new SupportScanner.SupportPath(2, 2, ground),
+            weakWest, new SupportScanner.SupportPath(1, 1, ground),
+            strongEast, new SupportScanner.SupportPath(1, 10, new BlockPos(10, 0, 0)));
+
+        SupportScanner.Parent parent = SupportScanner.chooseParent(nodes, paths, child);
+
+        assertEquals(weakWest, parent.pos());
         assertEquals(SupportEdgeType.SIDE, parent.edge());
         assertEquals(2, parent.momentArm());
     }

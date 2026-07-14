@@ -129,18 +129,42 @@ public final class SupportScanner {
             queue.addLast(pos.above().immutable());
 
             BlockPos below = pos.below();
-            if (!world.isLoaded(below)) return new Region(nodes, budget.size(), SupportStatus.UNLOADED);
-            BlockState belowState = world.getBlockState(below);
-            boolean downwardContinuation = BlockPhysics.category(belowState) == BlockCategory.STRUCTURAL
-                && belowState.getBlock() == state.getBlock();
+            Frontier frontier = downwardFrontier(world, below);
+            if (frontier.incomplete != null) return new Region(nodes, budget.size(), frontier.incomplete);
+            boolean downwardContinuation = frontier.structural && !frontier.frontier;
             if (downwardContinuation) queue.addLast(below.immutable());
-            boolean externalDownSupport = !downwardContinuation
-                && BlockPhysics.category(belowState) == BlockCategory.STRUCTURAL;
-            if (!externalDownSupport) {
+            if (!frontier.frontier) {
                 for (Direction direction : Direction.Plane.HORIZONTAL) queue.addLast(pos.relative(direction).immutable());
             }
         }
         return new Region(nodes, budget.size(), null);
+    }
+
+    /**
+     * A downward candidate is an external support frontier when it is the terminal block of a
+     * vertical run or belongs to a horizontal structural shelf. This geometry-only rule is stable
+     * across block/material transitions: narrow mixed columns remain inside the scan, while the
+     * first terrain-like shelf (including same-material terrain) supplies capacity without being
+     * flood-filled. All inspected positions must already be loaded; uncertainty fails closed.
+     */
+    private Frontier downwardFrontier(WorldView world, BlockPos candidate) {
+        if (!world.isLoaded(candidate)) return new Frontier(false, false, SupportStatus.UNLOADED);
+        if (BlockPhysics.category(world.getBlockState(candidate)) != BlockCategory.STRUCTURAL) {
+            return new Frontier(false, false, null);
+        }
+        BlockPos beneath = candidate.below();
+        if (!world.isLoaded(beneath)) return new Frontier(true, false, SupportStatus.UNLOADED);
+        if (BlockPhysics.category(world.getBlockState(beneath)) != BlockCategory.STRUCTURAL) {
+            return new Frontier(true, true, null);
+        }
+        for (Direction direction : Direction.Plane.HORIZONTAL) {
+            BlockPos side = candidate.relative(direction);
+            if (!world.isLoaded(side)) return new Frontier(true, false, SupportStatus.UNLOADED);
+            if (BlockPhysics.category(world.getBlockState(side)) == BlockCategory.STRUCTURAL) {
+                return new Frontier(true, true, null);
+            }
+        }
+        return new Frontier(true, false, null);
     }
 
     private Attached attachedTo(WorldView world, BlockPos origin, BlockPos host, ScanBudget budget,
@@ -180,7 +204,7 @@ public final class SupportScanner {
             .thenComparingInt(visit -> visit.pos.getZ()));
         for (BlockPos pos : nodes.keySet()) {
             if (pos.getY() <= world.getMinY()) {
-                SupportPath path = new SupportPath(0, 0, pos);
+                SupportPath path = new SupportPath(0, 0, pos, null);
                 paths.put(pos, path);
                 queue.add(new PathVisit(pos, path));
                 continue;
@@ -188,7 +212,7 @@ public final class SupportScanner {
             BlockPos below = pos.below();
             if (!world.isLoaded(below)) return new Paths(paths, SupportStatus.UNLOADED);
             if (!nodes.containsKey(below) && BlockPhysics.category(world.getBlockState(below)) == BlockCategory.STRUCTURAL) {
-                SupportPath path = new SupportPath(0, 0, pos);
+                SupportPath path = new SupportPath(0, 0, pos, null);
                 paths.put(pos, path);
                 queue.add(new PathVisit(pos, path));
             }
@@ -212,9 +236,10 @@ public final class SupportScanner {
     }
 
     static SupportPath advancePath(SupportPath parent, Direction direction, BlockPos next) {
-        if (direction == Direction.UP) return new SupportPath(parent.distance + 1, 0, next.immutable());
+        BlockPos predecessor = next.relative(direction.getOpposite()).immutable();
+        if (direction == Direction.UP) return new SupportPath(parent.distance + 1, 0, next.immutable(), predecessor);
         int horizontalArm = parent.horizontalArm + (direction.getAxis().isHorizontal() ? 1 : 0);
-        return new SupportPath(parent.distance + 1, horizontalArm, parent.ground);
+        return new SupportPath(parent.distance + 1, horizontalArm, parent.ground, predecessor);
     }
 
     private static boolean betterPath(SupportPath candidate, SupportPath current) {
@@ -223,7 +248,8 @@ public final class SupportScanner {
         if (candidate.distance != current.distance) return candidate.distance < current.distance;
         if (candidate.ground.getY() != current.ground.getY()) return candidate.ground.getY() < current.ground.getY();
         if (candidate.ground.getX() != current.ground.getX()) return candidate.ground.getX() < current.ground.getX();
-        return candidate.ground.getZ() < current.ground.getZ();
+        if (candidate.ground.getZ() != current.ground.getZ()) return candidate.ground.getZ() < current.ground.getZ();
+        return comparePositions(candidate.predecessor, current.predecessor) < 0;
     }
 
     static Parent chooseParent(Map<BlockPos, NodeData> nodes, Map<BlockPos, SupportPath> paths, BlockPos pos) {
@@ -236,18 +262,47 @@ public final class SupportScanner {
         Parent arch = archParent(nodes, paths, pos, own, Direction.NORTH, Direction.SOUTH);
         if (arch == null) arch = archParent(nodes, paths, pos, own, Direction.EAST, Direction.WEST);
         if (arch != null) return arch;
-        BlockPos best = null;
-        double bestShear = -1;
-        for (Direction direction : Direction.Plane.HORIZONTAL) {
-            BlockPos side = pos.relative(direction);
-            if (isCloser(paths, side, own) && nodes.get(side).profile.shearKg() > bestShear) {
-                best = side;
-                bestShear = nodes.get(side).profile.shearKg();
+        BlockPos best = sidePredecessor(paths, pos, path);
+        if (best == null) {
+            double bestShear = -1;
+            for (Direction direction : Direction.Plane.HORIZONTAL) {
+                BlockPos side = pos.relative(direction);
+                if (isCloser(paths, side, own) && nodes.get(side).profile.shearKg() > bestShear) {
+                    best = side;
+                    bestShear = nodes.get(side).profile.shearKg();
+                }
             }
         }
         if (best != null) return new Parent(best, SupportEdgeType.SIDE, paths.get(best).horizontalArm + 1);
         BlockPos above = pos.above();
         return isCloser(paths, above, own) ? new Parent(above, SupportEdgeType.HANG, 1) : null;
+    }
+
+    private static BlockPos sidePredecessor(Map<BlockPos, SupportPath> paths, BlockPos pos, SupportPath path) {
+        BlockPos recorded = path.predecessor;
+        if (recorded != null && recorded.getY() == pos.getY()
+            && Math.abs(recorded.getX() - pos.getX()) + Math.abs(recorded.getZ() - pos.getZ()) == 1
+            && isCloser(paths, recorded, path.distance)) return recorded;
+        // Package-level synthetic fixtures built with the legacy constructors have no predecessor.
+        // Reconstruct only a geometry-identical predecessor; production paths always use recorded.
+        for (Direction direction : Direction.Plane.HORIZONTAL) {
+            BlockPos side = pos.relative(direction);
+            SupportPath candidate = paths.get(side);
+            if (candidate != null && candidate.distance + 1 == path.distance
+                && candidate.horizontalArm + 1 == path.horizontalArm
+                && candidate.ground.equals(path.ground)) return side;
+        }
+        return null;
+    }
+
+    private static int comparePositions(BlockPos a, BlockPos b) {
+        if (a == b) return 0;
+        if (a == null) return -1;
+        if (b == null) return 1;
+        int byY = Integer.compare(a.getY(), b.getY());
+        if (byY != 0) return byY;
+        int byX = Integer.compare(a.getX(), b.getX());
+        return byX != 0 ? byX : Integer.compare(a.getZ(), b.getZ());
     }
 
     private static Parent archParent(Map<BlockPos, NodeData> nodes, Map<BlockPos, SupportPath> paths,
@@ -287,11 +342,13 @@ public final class SupportScanner {
     private record Region(Map<BlockPos, NodeData> nodes, int budgetCount, SupportStatus incomplete) {}
     record Paths(Map<BlockPos, SupportPath> paths, SupportStatus incomplete) {}
     record Parent(BlockPos pos, SupportEdgeType edge, int momentArm) {}
-    record SupportPath(int distance, int horizontalArm, BlockPos ground) {
-        SupportPath(int distance, BlockPos ground) { this(distance, distance, ground); }
+    record SupportPath(int distance, int horizontalArm, BlockPos ground, BlockPos predecessor) {
+        SupportPath(int distance, int horizontalArm, BlockPos ground) { this(distance, horizontalArm, ground, null); }
+        SupportPath(int distance, BlockPos ground) { this(distance, distance, ground, null); }
     }
     private record PathVisit(BlockPos pos, SupportPath path) {}
     private record Attached(List<BlockPos> positions, SupportStatus incomplete) {}
+    private record Frontier(boolean structural, boolean frontier, SupportStatus incomplete) {}
 
     private static final class ScanBudget {
         private final int cap;
