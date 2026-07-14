@@ -84,11 +84,22 @@ tasks.register("supportLogicTest", JavaExec) {
 	workingDir runDir
 }
 
+tasks.register("supportScannerTest", JavaExec) {
+	group = "verification"
+	description = "Runs scanner-facing world fixture regression tests"
+	dependsOn testClasses
+	classpath = sourceSets.test.runtimeClasspath
+	mainClass = "xyz.fftech.unsupported.support.SupportScannerTest"
+	def runDir = layout.buildDirectory.dir("supportScannerTest")
+	doFirst { runDir.get().asFile.mkdirs() }
+	workingDir runDir
+}
+
 test {
 	failOnNoDiscoveredTests = false
 }
 
-check.dependsOn configMigrationTest, supportLogicTest
+check.dependsOn configMigrationTest, supportLogicTest, supportScannerTest
 
 jar {
 	inputs.property "archivesName", project.base.archivesName

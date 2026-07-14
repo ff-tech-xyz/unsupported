@@ -8,4 +8,8 @@ public record SupportScanResult(BlockPos origin, int scannedCount, List<BlockPos
     public boolean limitReached() {
         return status == SupportStatus.LIMIT_REACHED;
     }
+
+    public boolean complete() {
+        return status == SupportStatus.SUPPORTED || status == SupportStatus.FAILED;
+    }
 }

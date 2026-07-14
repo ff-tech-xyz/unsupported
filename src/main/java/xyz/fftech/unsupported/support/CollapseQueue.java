@@ -54,7 +54,7 @@ public final class CollapseQueue {
         drainAttempts(scanQueue, 8, origin -> {
             queuedScans.remove(origin);
             SupportScanResult result = scanner.scan(level, origin);
-            if (!result.limitReached()) for (BlockPos failed : result.failedPositions()) enqueueFall(failed);
+            if (result.complete()) for (BlockPos failed : result.failedPositions()) enqueueFall(failed);
         });
 
         drainAttempts(fallingQueue, config.maxCollapseBlocksPerTick, pos -> {
