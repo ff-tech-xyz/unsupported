@@ -8,7 +8,10 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.BellBlock;
 import net.minecraft.world.level.block.CandleBlock;
 import net.minecraft.world.level.block.ChainBlock;
+import net.minecraft.world.level.block.SeaPickleBlock;
+import net.minecraft.world.level.block.TurtleEggBlock;
 import net.minecraft.world.level.block.state.properties.BellAttachType;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import xyz.fftech.unsupported.StrengthProfile;
 
 import java.util.List;
@@ -45,8 +48,11 @@ public final class SupportLogicTest {
         attemptedWorkConsumesBudget();
         actualStatesDriveMassAndAttachmentDirection();
         scannerBuildsDownParentBeforeSideParent();
+        sideArmFollowsSelectedHorizontalParentPath();
+        scannerGroundingFixtureUsesSelectedHorizontalParentArm();
+        downGroundingResetsArmAndOnlyHorizontalStepsIncreaseIt();
         benchmarkBoundedLoadTree();
-        System.out.println("SupportLogicTest: 10 passed");
+        System.out.println("SupportLogicTest: 12 passed");
     }
 
     private static void externalSupportCapacityIsChecked() {
@@ -89,6 +95,13 @@ public final class SupportLogicTest {
             .setValue(BellBlock.ATTACHMENT, BellAttachType.SINGLE_WALL).setValue(BellBlock.FACING, Direction.EAST)));
         assertEquals(List.of(bell.east(), bell.west()), AttachmentResolver.hosts(bell, Blocks.BELL.defaultBlockState()
             .setValue(BellBlock.ATTACHMENT, BellAttachType.DOUBLE_WALL).setValue(BellBlock.FACING, Direction.EAST)));
+        assertClose(1_400, StateMassModifiers.apply(100, Blocks.SEA_PICKLE.defaultBlockState()
+            .setValue(SeaPickleBlock.PICKLES, 4).setValue(BlockStateProperties.WATERLOGGED, true)));
+        assertClose(400, StateMassModifiers.apply(100, Blocks.TURTLE_EGG.defaultBlockState()
+            .setValue(TurtleEggBlock.EGGS, 4)));
+        assertEquals(List.of(bell.below()), AttachmentResolver.hosts(bell, Blocks.SEA_PICKLE.defaultBlockState()));
+        assertEquals(List.of(bell.below()), AttachmentResolver.hosts(bell, Blocks.TURTLE_EGG.defaultBlockState()));
+        assertEquals(List.of(), AttachmentResolver.hosts(bell, Blocks.CHAIN_COMMAND_BLOCK.defaultBlockState()));
         assertEquals(3, SupportScanner.horizontalDistance(new BlockPos(2, 40, 1), new BlockPos(0, 0, 0)));
     }
 
@@ -109,6 +122,85 @@ public final class SupportLogicTest {
         SupportScanner.Parent parent = SupportScanner.chooseParent(nodes, paths, child);
         assertEquals(below, parent.pos());
         assertEquals(SupportEdgeType.DOWN, parent.edge());
+    }
+
+    private static void sideArmFollowsSelectedHorizontalParentPath() {
+        StrengthProfile strongSide = new StrengthProfile();
+        strongSide.C = strongSide.S = strongSide.T = 10_000;
+        StrengthProfile weakSide = new StrengthProfile();
+        weakSide.C = weakSide.T = 10_000;
+        weakSide.S = 1;
+        BlockPos child = new BlockPos(2, 30, 0);
+        BlockPos selectedSide = child.west();
+        BlockPos competingSide = child.east();
+        Map<BlockPos, SupportScanner.NodeData> nodes = new LinkedHashMap<>();
+        nodes.put(child, new SupportScanner.NodeData(strongSide, 1, List.of()));
+        nodes.put(selectedSide, new SupportScanner.NodeData(strongSide, 1, List.of()));
+        nodes.put(competingSide, new SupportScanner.NodeData(weakSide, 1, List.of()));
+        Map<BlockPos, SupportScanner.SupportPath> paths = Map.of(
+            child, new SupportScanner.SupportPath(2, new BlockPos(10, -20, 0)),
+            selectedSide, new SupportScanner.SupportPath(1, new BlockPos(0, 0, 0)),
+            competingSide, new SupportScanner.SupportPath(1, new BlockPos(3, 29, 0)));
+
+        SupportScanner.Parent parent = SupportScanner.chooseParent(nodes, paths, child);
+
+        assertEquals(selectedSide, parent.pos());
+        assertEquals(SupportEdgeType.SIDE, parent.edge());
+        assertEquals(2, parent.momentArm());
+    }
+
+    private static void scannerGroundingFixtureUsesSelectedHorizontalParentArm() {
+        StrengthProfile strong = new StrengthProfile();
+        strong.C = strong.S = strong.T = 10_000;
+        StrengthProfile weak = new StrengthProfile();
+        weak.C = weak.T = 10_000;
+        weak.S = 1;
+        Map<BlockPos, SupportScanner.NodeData> nodes = new LinkedHashMap<>();
+        for (int y = 1; y <= 10; y++) {
+            BlockPos pos = new BlockPos(0, y, 0);
+            nodes.put(pos, new SupportScanner.NodeData(strong, 1, List.of()));
+        }
+        BlockPos selectedSide = new BlockPos(1, 10, 0);
+        BlockPos child = new BlockPos(2, 10, 0);
+        BlockPos competingRoot = new BlockPos(5, 9, 0);
+        BlockPos competingTop = competingRoot.above();
+        BlockPos competingBridge = new BlockPos(4, 10, 0);
+        BlockPos competingSide = new BlockPos(3, 10, 0);
+        nodes.put(selectedSide, new SupportScanner.NodeData(strong, 1, List.of()));
+        nodes.put(child, new SupportScanner.NodeData(strong, 1, List.of()));
+        nodes.put(competingRoot, new SupportScanner.NodeData(weak, 1, List.of()));
+        nodes.put(competingTop, new SupportScanner.NodeData(weak, 1, List.of()));
+        nodes.put(competingBridge, new SupportScanner.NodeData(weak, 1, List.of()));
+        nodes.put(competingSide, new SupportScanner.NodeData(weak, 1, List.of()));
+        Map<BlockPos, net.minecraft.world.level.block.state.BlockState> supports = Map.of(
+            new BlockPos(0, 0, 0), Blocks.STONE.defaultBlockState(),
+            new BlockPos(5, 8, 0), Blocks.STONE.defaultBlockState());
+        SupportScanner.WorldView world = new SupportScanner.WorldView() {
+            @Override public boolean isLoaded(BlockPos pos) { return true; }
+            @Override public net.minecraft.world.level.block.state.BlockState getBlockState(BlockPos pos) {
+                return supports.getOrDefault(pos, Blocks.AIR.defaultBlockState());
+            }
+            @Override public int getMinY() { return -64; }
+        };
+
+        Map<BlockPos, SupportScanner.SupportPath> paths = new SupportScanner(new xyz.fftech.unsupported.UnsupportedConfig())
+            .supportPaths(world, nodes).paths();
+        SupportScanner.Parent parent = SupportScanner.chooseParent(nodes, paths, child);
+
+        assertEquals(selectedSide, parent.pos());
+        assertEquals(SupportEdgeType.SIDE, parent.edge());
+        assertEquals(2, parent.momentArm());
+    }
+
+    private static void downGroundingResetsArmAndOnlyHorizontalStepsIncreaseIt() {
+        BlockPos root = new BlockPos(0, 0, 0);
+        SupportScanner.SupportPath path = new SupportScanner.SupportPath(0, root);
+        path = SupportScanner.advancePath(path, Direction.UP, root.above());
+        path = SupportScanner.advancePath(path, Direction.UP, root.above(2));
+        assertEquals(0, path.horizontalArm());
+        path = SupportScanner.advancePath(path, Direction.EAST, root.above(2).east());
+        path = SupportScanner.advancePath(path, Direction.EAST, root.above(2).east(2));
+        assertEquals(2, path.horizontalArm());
     }
 
     private static void benchmarkBoundedLoadTree() {

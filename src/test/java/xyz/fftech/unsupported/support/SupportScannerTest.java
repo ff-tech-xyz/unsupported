@@ -35,10 +35,14 @@ public final class SupportScannerTest {
         capAndRadiusAreExplicitlyUncertain();
         unloadedChunkIsCheckedBeforeWorldRead();
         externalDirtFailsWhileStoneSupports();
+        topOriginReachesRealDirtAndStoneSupport();
+        middleOriginReachesRealDirtAndStoneSupport();
         attachmentsShareBudgetAndCollapseTogether();
+        attachmentRadiusIsMeasuredFromScanOrigin();
+        unknownAttachmentIsNotClaimedByEitherStructure();
         deterministicCollapseOutput();
         staleAndRejectedAttemptsConsumeBudgets();
-        System.out.println("SupportScannerTest: 7 passed");
+        System.out.println("SupportScannerTest: 11 passed");
     }
 
     private static void terrainBoundaryDoesNotFlood() {
@@ -103,6 +107,31 @@ public final class SupportScannerTest {
         assertEquals(List.of(), stoneResult.failedPositions());
     }
 
+    private static void topOriginReachesRealDirtAndStoneSupport() {
+        BlockPos base = new BlockPos(0, 1, 0);
+        assertColumnFromOrigin(base, base.above(29));
+    }
+
+    private static void middleOriginReachesRealDirtAndStoneSupport() {
+        BlockPos base = new BlockPos(0, 1, 0);
+        assertColumnFromOrigin(base, base.above(14));
+    }
+
+    private static void assertColumnFromOrigin(BlockPos base, BlockPos scanOrigin) {
+        FakeWorld dirt = column(base, Blocks.DIRT.defaultBlockState(), 30, Blocks.OAK_PLANKS.defaultBlockState());
+        FakeWorld stone = column(base, Blocks.STONE.defaultBlockState(), 30, Blocks.OAK_PLANKS.defaultBlockState());
+
+        SupportScanResult dirtResult = scanner(256, 64).scan(dirt, scanOrigin);
+        SupportScanResult stoneResult = scanner(256, 64).scan(stone, scanOrigin);
+
+        assertEquals(SupportStatus.FAILED, dirtResult.status());
+        assertEquals(30, dirtResult.scannedCount());
+        assertEquals(30, dirtResult.failedPositions().size());
+        assertEquals(SupportStatus.SUPPORTED, stoneResult.status());
+        assertEquals(30, stoneResult.scannedCount());
+        assertEquals(List.of(), stoneResult.failedPositions());
+    }
+
     private static void attachmentsShareBudgetAndCollapseTogether() {
         BlockPos origin = new BlockPos(0, 1, 0);
         FakeWorld world = new FakeWorld();
@@ -125,6 +154,41 @@ public final class SupportScannerTest {
         assertEquals(SupportStatus.LIMIT_REACHED, capped.status());
         assertEquals(3, capped.scannedCount());
         assertEquals(List.of(), capped.failedPositions());
+    }
+
+    private static void attachmentRadiusIsMeasuredFromScanOrigin() {
+        BlockPos origin = new BlockPos(0, 1, 0);
+        FakeWorld world = new FakeWorld();
+        world.put(origin.below(), Blocks.MUD_BRICK_WALL.defaultBlockState());
+        world.put(origin, Blocks.COBBLESTONE.defaultBlockState());
+        BlockState horizontalChain = Blocks.IRON_CHAIN.defaultBlockState().setValue(ChainBlock.AXIS, Direction.Axis.X);
+        world.put(origin.east(), horizontalChain);
+        world.put(origin.east(2), horizontalChain);
+
+        SupportScanResult result = scanner(16, 1).scan(world, origin);
+
+        assertEquals(SupportStatus.RADIUS_REACHED, result.status());
+        assertEquals(List.of(), result.failedPositions());
+    }
+
+    private static void unknownAttachmentIsNotClaimedByEitherStructure() {
+        BlockPos left = new BlockPos(0, 1, 0);
+        BlockPos unknown = left.east();
+        BlockPos right = left.east(2);
+        FakeWorld world = new FakeWorld();
+        world.put(left.below(), Blocks.DIRT.defaultBlockState());
+        world.put(right.below(), Blocks.DIRT.defaultBlockState());
+        world.put(left, Blocks.COBBLESTONE.defaultBlockState());
+        world.put(unknown, Blocks.CHAIN_COMMAND_BLOCK.defaultBlockState());
+        world.put(right, Blocks.COBBLESTONE.defaultBlockState());
+
+        SupportScanResult leftResult = scanner(16, 16).scan(world, left);
+        SupportScanResult rightResult = scanner(16, 16).scan(world, right);
+
+        assertEquals(SupportStatus.UNTOUCHED_FALLBACK, leftResult.status());
+        assertEquals(List.of(), leftResult.failedPositions());
+        assertEquals(SupportStatus.UNTOUCHED_FALLBACK, rightResult.status());
+        assertEquals(List.of(), rightResult.failedPositions());
     }
 
     private static void deterministicCollapseOutput() {
@@ -157,9 +221,13 @@ public final class SupportScannerTest {
     }
 
     private static FakeWorld column(BlockPos origin, BlockState support, int height) {
+        return column(origin, support, height, Blocks.COBBLESTONE.defaultBlockState());
+    }
+
+    private static FakeWorld column(BlockPos origin, BlockState support, int height, BlockState columnState) {
         FakeWorld world = new FakeWorld();
         world.put(origin.below(), support);
-        for (int y = 0; y < height; y++) world.put(origin.above(y), Blocks.COBBLESTONE.defaultBlockState());
+        for (int y = 0; y < height; y++) world.put(origin.above(y), columnState);
         return world;
     }
 

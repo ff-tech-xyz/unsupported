@@ -5,7 +5,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.state.BlockState;
 import java.util.Map;
-import java.util.ArrayList;
 import java.util.List;
 
 public final class AttachmentResolver {
@@ -39,8 +38,10 @@ public final class AttachmentResolver {
         if ("ceiling".equals(face) || "true".equals(values.get("hanging")) || id.contains("hanging_sign")) return List.of(pos.above());
         if ("floor".equals(face)) return List.of(pos.below());
         if (direction != null && (id.contains("button") || id.contains("lever"))) return List.of(pos.relative(direction.getOpposite()));
-        ArrayList<BlockPos> conservative = new ArrayList<>(6);
-        for (Direction candidate : Direction.values()) conservative.add(pos.relative(candidate));
-        return List.copyOf(conservative);
+        if (id.equals("sea_pickle") || id.equals("turtle_egg") || id.equals("flower_pot")
+            || id.equals("torch") || id.endsWith("_candle") || id.equals("candle")
+            || id.endsWith("_pressure_plate") || id.endsWith("_rail") || id.equals("rail")
+            || id.endsWith("_sapling")) return List.of(pos.below());
+        return List.of();
     }
 }
